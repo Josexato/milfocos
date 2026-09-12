@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<title>Mil Focos — Un mazo, veinte juegos</title>
+<meta name="description" content="Catálogo gratuito de 20 juegos de cartas (clásicos, de bazas y adaptaciones de juegos modernos como Regicide, Trio, Flip 7 y The Mind) que se juegan con un solo mazo de 52 cartas. Reglas completas en PDF.">
+<meta property="og:title" content="Mil Focos — Un mazo, veinte juegos">
+<meta property="og:description" content="20 juegos de cartas con un solo mazo. Reglas completas, gratis, en PDF.">
+<meta property="og:url" content="https://milfocos.com/">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preload" href="fonts/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link href="fonts/bricolage.css" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231b2a4a'/%3E%3Ccircle cx='32' cy='27' r='15' fill='%23f5c518'/%3E%3Crect x='24' y='42' width='16' height='10' rx='3' fill='%23fff'/%3E%3C/svg%3E">
+<style>
+:root{--ink:#1b2a4a;--ink-2:#3d4a66;--paper:#ffffff;--paper-2:#f3f1ea;--line:#d9d6cc;--red:#c8102e;--yellow:#f5c518;--max:72rem}
+*{box-sizing:border-box}
+html{font-family:"Bricolage Grotesque",system-ui,sans-serif;color:var(--ink);background:var(--paper);font-size:17px;line-height:1.5;-webkit-text-size-adjust:100%}
+body{margin:0}
+a{color:inherit}
+h1,h2,h3{margin:0;font-weight:700;line-height:1.05;letter-spacing:-.01em}
+p{margin:0 0 .7em}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 clamp(1rem,4vw,2.5rem)}
+.red{color:var(--red)}
+.brand{display:inline-flex;align-items:center;gap:.5rem;font-weight:800;text-decoration:none;font-size:1.15rem;letter-spacing:-.02em}
+.brand .bulb{width:1.35rem;height:1.35rem;background:var(--yellow);border-radius:50% 50% 45% 45%;position:relative;box-shadow:inset 0 -5px 0 rgba(0,0,0,.08)}
+.brand .bulb:after{content:"";position:absolute;left:36%;right:36%;bottom:-.22rem;height:.28rem;background:var(--ink);border-radius:2px}
+header.top{display:flex;justify-content:space-between;align-items:center;padding:1.1rem 0;gap:1rem;flex-wrap:wrap}
+header.top nav a{margin-left:1.2rem;text-decoration:none;font-weight:600}
+header.top nav a:hover{text-decoration:underline;text-underline-offset:.2em}
+.btn{display:inline-block;background:var(--ink);color:#fff;text-decoration:none;font-weight:700;padding:.85rem 1.4rem;border-radius:.6rem;border:2px solid var(--ink)}
+.btn:hover{background:#fff;color:var(--ink)}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn.ghost:hover{background:var(--ink);color:#fff}
+footer{border-top:1px solid var(--line);margin-top:4rem;padding:2rem 0 3rem;font-size:.9rem;color:var(--ink-2)}
+footer p{max-width:60ch}
+:focus-visible{outline:3px solid var(--yellow);outline-offset:2px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+
+<style>
+.hero{display:grid;grid-template-columns:1.15fr 1fr;gap:2rem;align-items:center;padding:3rem 0 4rem;min-height:70vh}
+.hero h1{font-size:clamp(2.6rem,7vw,5.4rem);font-variation-settings:"wdth" 80;font-weight:800;line-height:.95;letter-spacing:-.03em}
+.hero h1 span{display:block}
+.hero .lead{font-size:1.2rem;max-width:34ch;margin:1.4rem 0 1.8rem;color:var(--ink-2)}
+.hero .cta{display:flex;gap:.8rem;flex-wrap:wrap;align-items:center}
+.hero .note{font-size:.85rem;color:var(--ink-2);margin-top:1rem}
+.fan{position:relative;height:22rem;display:flex;justify-content:center;align-items:center}
+.card{position:absolute;width:9.5rem;aspect-ratio:5/7;background:#fff;border:1px solid var(--line);border-radius:.7rem;box-shadow:0 12px 30px rgba(27,42,74,.16),0 1px 2px rgba(27,42,74,.2);transform:translateX(var(--x)) rotate(var(--r));transform-origin:50% 130%;font-weight:800;color:var(--ink);transition:transform .35s cubic-bezier(.2,.8,.2,1)}
+.card.red{color:var(--red)}
+.card .tl,.card .br{position:absolute;font-size:1.05rem;line-height:1;text-align:center}
+.card .tl{top:.55rem;left:.6rem}
+.card .br{bottom:.55rem;right:.6rem;transform:rotate(180deg)}
+.card .big{position:absolute;inset:0;display:grid;place-items:center;font-size:4.2rem}
+.fan:hover .card{transform:translateX(calc(var(--x)*1.35)) rotate(calc(var(--r)*1.25)) translateY(-.5rem)}
+.list{padding:1rem 0 0}
+.list h2{font-size:clamp(1.6rem,3.5vw,2.4rem);margin-bottom:.4rem}
+.list > p{color:var(--ink-2);max-width:60ch}
+.games{list-style:none;padding:0;margin:1.6rem 0 0;border-top:2px solid var(--ink)}
+.games li.cat h3{font-size:.95rem;font-weight:700;padding:1.4rem 0 .5rem;color:var(--ink-2)}
+.games li a{display:grid;grid-template-columns:2.4rem 1fr 6.5rem 6.5rem 4.6rem;gap:.8rem;align-items:center;padding:.65rem 0;border-bottom:1px solid var(--line);text-decoration:none}
+.games li a:hover .nm{text-decoration:underline;text-underline-offset:.2em}
+.games .n{font-weight:800;color:var(--red)}
+.games .nm{font-weight:700}
+.games .nm small{display:block;font-weight:400;color:var(--ink-2);font-size:.88rem}
+.games .pl,.games .du{font-size:.92rem;color:var(--ink-2)}
+.games .lv{font-size:.8rem;letter-spacing:.1em}
+.games .lv em{font-style:normal;color:var(--line)}
+.how{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;padding:3.5rem 0 0}
+.how h3{font-size:1.15rem;margin-bottom:.4rem}
+.how p{color:var(--ink-2);font-size:.97rem}
+@media (max-width:800px){
+  .hero{grid-template-columns:1fr;padding:1.5rem 0 3rem;min-height:0}
+  .fan{height:15rem;order:-1}
+  .card{width:6.6rem} .card .big{font-size:3rem}
+  .games li a{grid-template-columns:2rem 1fr 4.4rem} .games .du,.games .lv{display:none}
+  .how{grid-template-columns:1fr;gap:1.4rem}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <a class="brand" href="/"><span class="bulb" aria-hidden="true"></span>Mil Focos</a>
+  <nav><a href="catalogo.html">Reglas</a><a href="Un_mazo_20_juegos.pdf">PDF</a><a href="#como">Cómo funciona</a></nav>
+</header>
+
+<section class="hero">
+  <div>
+    <h1><span>Un mazo.</span><span>Veinte juegos.</span></h1>
+    <p class="lead">Clásicos, juegos de bazas y adaptaciones de juegos modernos (Regicide, Trio, Flip 7, The Mind) que se juegan con las 52 cartas y los 2 comodines que ya tienes en un cajón.</p>
+    <div class="cta">
+      <a class="btn" href="Un_mazo_20_juegos.pdf">Descargar el catálogo (PDF)</a>
+      <a class="btn ghost" href="catalogo.html">Leer las reglas en línea</a>
+    </div>
+    <p class="note">Gratis. 24 páginas. Reglas completas, listas para jugar sin buscar nada más.</p>
+  </div>
+  <div class="fan" aria-hidden="true"><div class="card " style="--r:-24deg;--x:-3.2rem"><span class="tl">A<br>♣</span><span class="big">♣</span><span class="br">A<br>♣</span></div><div class="card red" style="--r:-8deg;--x:-1.1rem"><span class="tl">K<br>♥</span><span class="big">♥</span><span class="br">K<br>♥</span></div><div class="card red" style="--r:8deg;--x:1.1rem"><span class="tl">Q<br>♦</span><span class="big">♦</span><span class="br">Q<br>♦</span></div><div class="card " style="--r:24deg;--x:3.2rem"><span class="tl">J<br>♠</span><span class="big">♠</span><span class="br">J<br>♠</span></div></div>
+</section>
+
+<section class="list" id="juegos">
+  <h2>Los veinte juegos</h2>
+  <p>Ordenados de más simple a más exigente dentro de cada grupo. La complejidad va de ● (se explica en un minuto) a ●●●● (requiere una partida de práctica).</p>
+  <ul class="games">
+<li class="cat"><h3>Rápidos y familiares</h3></li>
+<li><a href="catalogo.html#01-ocho-loco"><span class="n">01</span><span class="nm">Ocho Loco<small>El UNO original, con naipes.</small></span><span class="pl">2–7</span><span class="du">15–30 min</span><span class="lv" title="Complejidad 1 de 4">●<em>●●●</em></span></a></li>
+<li><a href="catalogo.html#02-mentiroso"><span class="n">02</span><span class="nm">Mentiroso<small>Deshazte de tus cartas mintiendo sin que te pillen.</small></span><span class="pl">3–8</span><span class="du">15–25 min</span><span class="lv" title="Complejidad 1 de 4">●<em>●●●</em></span></a></li>
+<li><a href="catalogo.html#03-palace"><span class="n">03</span><span class="nm">Palace<small>Cartas ocultas, cartas a ciegas y el que se queda con cartas pierde.</small></span><span class="pl">2–5</span><span class="du">20–30 min</span><span class="lv" title="Complejidad 2 de 4">●●<em>●●</em></span></a></li>
+<li><a href="catalogo.html#04-presidente"><span class="n">04</span><span class="nm">Presidente<small>Jerarquía social: el que gana manda y recibe las mejores cartas.</small></span><span class="pl">4–7</span><span class="du">30–45 min</span><span class="lv" title="Complejidad 2 de 4">●●<em>●●</em></span></a></li>
+<li><a href="catalogo.html#05-golf"><span class="n">05</span><span class="nm">Golf<small>El Skyjo con naipes: suma lo menos posible.</small></span><span class="pl">2–6</span><span class="du">30–45 min</span><span class="lv" title="Complejidad 1 de 4">●<em>●●●</em></span></a></li>
+<li><a href="catalogo.html#06-cabo"><span class="n">06</span><span class="nm">Cabo<small>Memoria y poderes: espía, intercambia y canta «¡Cabo!».</small></span><span class="pl">2–5</span><span class="du">30–45 min</span><span class="lv" title="Complejidad 2 de 4">●●<em>●●</em></span></a></li>
+<li><a href="catalogo.html#07-manotazo-egipcio"><span class="n">07</span><span class="nm">Manotazo egipcio<small>Reflejos puros: pega la pila cuando salgan dobles.</small></span><span class="pl">2–6</span><span class="du">10–20 min</span><span class="lv" title="Complejidad 1 de 4">●<em>●●●</em></span></a></li>
+<li class="cat"><h3>Juegos de bazas</h3></li>
+<li><a href="catalogo.html#08-corazones"><span class="n">08</span><span class="nm">Corazones<small>Evita los corazones y la Dama de picas... o llévatelos todos.</small></span><span class="pl">3–5 (ideal 4)</span><span class="du">45–60 min</span><span class="lv" title="Complejidad 2 de 4">●●<em>●●</em></span></a></li>
+<li><a href="catalogo.html#09-espadas"><span class="n">09</span><span class="nm">Espadas<small>Apuesta bazas en equipo; las picas siempre triunfan.</small></span><span class="pl">4 (parejas)</span><span class="du">45–60 min</span><span class="lv" title="Complejidad 3 de 4">●●●<em>●</em></span></a></li>
+<li><a href="catalogo.html#10-apuesta-exacta"><span class="n">10</span><span class="nm">Apuesta exacta<small>El Skull King / Wizard casero: acierta exactamente tus bazas.</small></span><span class="pl">3–7</span><span class="du">30–45 min</span><span class="lv" title="Complejidad 2 de 4">●●<em>●●</em></span></a></li>
+<li><a href="catalogo.html#11-euchre"><span class="n">11</span><span class="nm">Euchre<small>Bazas rápidas con 24 cartas y jotas que cambian de palo.</small></span><span class="pl">4 (parejas)</span><span class="du">30–40 min</span><span class="lv" title="Complejidad 3 de 4">●●●<em>●</em></span></a></li>
+<li><a href="catalogo.html#12-durak"><span class="n">12</span><span class="nm">Durak<small>Ataca y defiende; el último con cartas es el «tonto».</small></span><span class="pl">2–6</span><span class="du">20–30 min</span><span class="lv" title="Complejidad 2 de 4">●●<em>●●</em></span></a></li>
+<li class="cat"><h3>Combinaciones y captura</h3></li>
+<li><a href="catalogo.html#13-gin-rummy"><span class="n">13</span><span class="nm">Gin Rummy<small>El mejor rummy para dos: forma grupos y «toca» a tiempo.</small></span><span class="pl">2</span><span class="du">30–60 min</span><span class="lv" title="Complejidad 2 de 4">●●<em>●●</em></span></a></li>
+<li><a href="catalogo.html#14-casino"><span class="n">14</span><span class="nm">Casino<small>Captura cartas de la mesa sumando y construyendo.</small></span><span class="pl">2–4</span><span class="du">30–45 min</span><span class="lv" title="Complejidad 3 de 4">●●●<em>●</em></span></a></li>
+<li><a href="catalogo.html#15-cribbage"><span class="n">15</span><span class="nm">Cribbage<small>Clásico de puntuación combinatoria; no hace falta tablero.</small></span><span class="pl">2</span><span class="du">30–40 min</span><span class="lv" title="Complejidad 4 de 4">●●●●<em></em></span></a></li>
+<li class="cat"><h3>Modernos, cooperativos y adaptaciones</h3></li>
+<li><a href="catalogo.html#16-regicide"><span class="n">16</span><span class="nm">Regicide<small>Derroten juntos a 12 monarcas; la joya moderna con naipes.</small></span><span class="pl">1–4 · coop</span><span class="du">20–40 min</span><span class="lv" title="Complejidad 3 de 4">●●●<em>●</em></span></a></li>
+<li><a href="catalogo.html#17-trio"><span class="n">17</span><span class="nm">Trio<small>Memoria y deducción: encuentra tres cartas iguales.</small></span><span class="pl">3–6</span><span class="du">15–20 min</span><span class="lv" title="Complejidad 1 de 4">●<em>●●●</em></span></a></li>
+<li><a href="catalogo.html#18-siete-a-la-vista"><span class="n">18</span><span class="nm">Siete a la vista<small>Presiona tu suerte: ¿otra carta o me planto?</small></span><span class="pl">3–8</span><span class="du">15–25 min</span><span class="lv" title="Complejidad 1 de 4">●<em>●●●</em></span></a></li>
+<li><a href="catalogo.html#19-la-mente"><span class="n">19</span><span class="nm">La Mente<small>Jueguen en orden ascendente sin hablar. Sí, en serio.</small></span><span class="pl">2–4 · coop</span><span class="du">15–25 min</span><span class="lv" title="Complejidad 1 de 4">●<em>●●●</em></span></a></li>
+<li><a href="catalogo.html#20-texas-hold-em-con-puntos"><span class="n">20</span><span class="nm">Texas Hold'em con puntos<small>Póker sin fichas: se anota en papel.</small></span><span class="pl">2–8</span><span class="du">45–90 min</span><span class="lv" title="Complejidad 3 de 4">●●●<em>●</em></span></a></li>
+    <li class="cat"><h3>Bonus</h3></li>
+    <li><a href="catalogo.html#bonus-solitarios"><span class="n">+</span><span class="nm">Klondike y Pirámide<small>Dos solitarios para cuando nadie más quiere jugar.</small></span><span class="pl">1</span><span class="du">5–15 min</span><span class="lv">●<em>●●●</em></span></a></li>
+  </ul>
+</section>
+
+<section class="how" id="como">
+  <div><h3>Qué necesitas</h3><p>Un mazo inglés de 52 cartas con sus 2 comodines, y papel y lápiz para anotar puntos. Nada más: ni fichas, ni dados, ni tablero.</p></div>
+  <div><h3>Por qué existe</h3><p>Muchos juegos de cartas modernos son, en el fondo, un mazo con arte bonito. Puedes probarlos con naipes y, si te enganchan, comprar la caja original por gusto y para apoyar a su autor.</p></div>
+  <div><h3>Qué son las adaptaciones</h3><p>Trio, Flip 7 y The Mind son versiones caseras para naipes, marcadas como tales. Regicide se publica con reglas para mazo estándar; aquí están completas en español.</p></div>
+</section>
+
+<footer>
+  <p><strong>Mil Focos</strong> — un proyecto personal de José Cáceres, Lima. Los nombres de juegos mencionados pertenecen a sus editores; las adaptaciones son caseras y no oficiales. Si un juego te gusta, compra la caja.</p>
+  <p>Catálogo 2026. Sugerencias y correcciones: escríbeme por <a href="https://github.com/Josexato/milfocos/issues">GitHub</a>.</p>
+</footer>
+</div>
+</body>
+</html>
