@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<title>Reglas — Mil Focos</title>
+<meta name="description" content="Reglas completas de 20 juegos de cartas con un mazo estándar: Ocho Loco, Palace, Presidente, Cabo, Corazones, Espadas, Gin Rummy, Casino, Cribbage, Regicide y adaptaciones de Trio, Flip 7 y The Mind.">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231b2a4a'/%3E%3Ccircle cx='32' cy='27' r='15' fill='%23f5c518'/%3E%3Crect x='24' y='42' width='16' height='10' rx='3' fill='%23fff'/%3E%3C/svg%3E">
+<style>
+:root{--ink:#1b2a4a;--ink-2:#3d4a66;--paper:#ffffff;--paper-2:#f3f1ea;--line:#d9d6cc;--red:#c8102e;--yellow:#f5c518;--max:72rem}
+*{box-sizing:border-box}
+html{font-family:"Bricolage Grotesque",system-ui,sans-serif;color:var(--ink);background:var(--paper);font-size:17px;line-height:1.5;-webkit-text-size-adjust:100%}
+body{margin:0}
+a{color:inherit}
+h1,h2,h3{margin:0;font-weight:700;line-height:1.05;letter-spacing:-.01em}
+p{margin:0 0 .7em}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 clamp(1rem,4vw,2.5rem)}
+.red{color:var(--red)}
+.brand{display:inline-flex;align-items:center;gap:.5rem;font-weight:800;text-decoration:none;font-size:1.15rem;letter-spacing:-.02em}
+.brand .bulb{width:1.35rem;height:1.35rem;background:var(--yellow);border-radius:50% 50% 45% 45%;position:relative;box-shadow:inset 0 -5px 0 rgba(0,0,0,.08)}
+.brand .bulb:after{content:"";position:absolute;left:36%;right:36%;bottom:-.22rem;height:.28rem;background:var(--ink);border-radius:2px}
+header.top{display:flex;justify-content:space-between;align-items:center;padding:1.1rem 0;gap:1rem;flex-wrap:wrap}
+header.top nav a{margin-left:1.2rem;text-decoration:none;font-weight:600}
+header.top nav a:hover{text-decoration:underline;text-underline-offset:.2em}
+.btn{display:inline-block;background:var(--ink);color:#fff;text-decoration:none;font-weight:700;padding:.85rem 1.4rem;border-radius:.6rem;border:2px solid var(--ink)}
+.btn:hover{background:#fff;color:var(--ink)}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn.ghost:hover{background:var(--ink);color:#fff}
+footer{border-top:1px solid var(--line);margin-top:4rem;padding:2rem 0 3rem;font-size:.9rem;color:var(--ink-2)}
+footer p{max-width:60ch}
+:focus-visible{outline:3px solid var(--yellow);outline-offset:2px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+
+<style>
+.layout{display:grid;grid-template-columns:15rem 1fr;gap:3rem;align-items:start;padding-top:1rem}
+.toc{position:sticky;top:1rem;max-height:calc(100vh - 2rem);overflow:auto;font-size:.9rem;padding-right:.5rem}
+.toc ul{list-style:none;margin:0;padding:0}
+.toc li a{display:flex;gap:.5rem;padding:.28rem 0;text-decoration:none;border-bottom:1px solid var(--line)}
+.toc li a span{color:var(--red);font-weight:800;min-width:1.6rem}
+.toc li a:hover{text-decoration:underline;text-underline-offset:.2em}
+.toc .pdf{display:block;margin:0 0 .9rem;font-weight:700}
+main{max-width:46rem}
+main > h1{font-size:clamp(2rem,5vw,3.2rem);font-variation-settings:"wdth" 80;letter-spacing:-.03em;margin-bottom:.3rem}
+main > .sub{color:var(--ink-2);margin-bottom:2rem;max-width:60ch}
+.game{padding:2.5rem 0 1rem;border-top:3px solid var(--ink);margin-top:2rem;scroll-margin-top:1rem}
+.gh{display:flex;align-items:baseline;gap:.8rem;flex-wrap:wrap;margin-bottom:.6rem}
+.gh .num{font-size:1.6rem;font-weight:800;color:var(--red)}
+.gh h2{font-size:clamp(1.7rem,4vw,2.4rem)}
+.gh .alias{color:var(--ink-2);font-size:.95rem;flex-basis:100%}
+.ficha{display:flex;flex-wrap:wrap;gap:.4rem;margin:.6rem 0 1rem}
+.ficha span{background:var(--paper-2);border-radius:.4rem;padding:.25rem .6rem;font-size:.85rem}
+.ficha span b{color:var(--ink-2);font-weight:600;margin-right:.3rem}
+.intro{font-size:1.1rem;color:var(--ink-2);margin-bottom:1rem}
+.cols{column-count:1}
+h3{font-size:.95rem;text-transform:uppercase;letter-spacing:.06em;color:var(--red);margin:1.2rem 0 .3rem}
+ul,ol{margin:.2rem 0 .8rem;padding-left:1.3rem}
+li{margin-bottom:.25rem}
+.box{background:var(--paper-2);border-left:4px solid var(--red);padding:.7rem 1rem;margin:1rem 0;font-size:.95rem;border-radius:0 .4rem .4rem 0}
+.box b{color:var(--red)}
+table.mini{border-collapse:collapse;font-size:.92rem;margin:.4rem 0 .9rem;width:100%}
+table.mini th,table.mini td{border:1px solid var(--line);padding:.35rem .6rem;text-align:left;vertical-align:top}
+table.mini th{background:var(--paper-2)}
+.tag{display:inline-block;font-size:.65rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:.15rem .5rem;border-radius:.3rem;background:var(--red);color:#fff;vertical-align:middle}
+.tag.coop{background:#1e7d5a} .tag.adapt{background:#b26a00}
+.nota{font-size:.9rem;color:var(--ink-2);margin-top:1rem;border-top:1px solid var(--line);padding-top:.6rem}
+.top-link{display:inline-block;margin-top:1rem;font-size:.85rem}
+@media (max-width:900px){
+  .layout{grid-template-columns:1fr;gap:1rem}
+  .toc{position:static;max-height:none;columns:2;column-gap:1.5rem}
+  .toc .pdf{column-span:all}
+  table.mini{display:block;overflow-x:auto}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <a class="brand" href="/"><span class="bulb" aria-hidden="true"></span>Mil Focos</a>
+  <nav><a href="/">Inicio</a><a href="Un_mazo_20_juegos.pdf">PDF</a></nav>
+</header>
+<div class="layout">
+<aside class="toc" aria-label="Índice de juegos">
+  <a class="pdf" href="Un_mazo_20_juegos.pdf">Descargar todo en PDF</a>
+  <ul><li><a href="#01-ocho-loco"><span>01</span>Ocho Loco</a></li><li><a href="#02-mentiroso"><span>02</span>Mentiroso</a></li><li><a href="#03-palace"><span>03</span>Palace</a></li><li><a href="#04-presidente"><span>04</span>Presidente</a></li><li><a href="#05-golf"><span>05</span>Golf</a></li><li><a href="#06-cabo"><span>06</span>Cabo</a></li><li><a href="#07-manotazo-egipcio"><span>07</span>Manotazo egipcio</a></li><li><a href="#08-corazones"><span>08</span>Corazones</a></li><li><a href="#09-espadas"><span>09</span>Espadas</a></li><li><a href="#10-apuesta-exacta"><span>10</span>Apuesta exacta</a></li><li><a href="#11-euchre"><span>11</span>Euchre</a></li><li><a href="#12-durak"><span>12</span>Durak</a></li><li><a href="#13-gin-rummy"><span>13</span>Gin Rummy</a></li><li><a href="#14-casino"><span>14</span>Casino</a></li><li><a href="#15-cribbage"><span>15</span>Cribbage</a></li><li><a href="#16-regicide"><span>16</span>Regicide</a></li><li><a href="#17-trio"><span>17</span>Trio</a></li><li><a href="#18-siete-a-la-vista"><span>18</span>Siete a la vista</a></li><li><a href="#19-la-mente"><span>19</span>La Mente</a></li><li><a href="#20-texas-hold-em-con-puntos"><span>20</span>Texas Hold'em con puntos</a></li><li><a href="#bonus-solitarios"><span>+</span>Bonus: dos solitarios</a></li></ul>
+</aside>
+<main>
+  <h1>Reglas de los veinte juegos</h1>
+  <p class="sub">Convenciones: «robar» es tomar carta del mazo; «baza» es una ronda de una carta por jugador, que gana la carta más alta del palo de salida salvo triunfo. Orden de valores por defecto: A (alto) K Q J 10 … 2, salvo que la ficha diga otra cosa. Los comodines solo se usan donde se menciona.</p>
+<article class="game" id="01-ocho-loco">
+  <div class="gh"><span class="num">01</span><h2>Ocho Loco</h2><span class="alias">Crazy Eights · «UNO con naipes»</span></div>
+  <div class="ficha"><span><b>Jugadores</b>2–7</span><span><b>Edad</b>6+</span><span><b>Duración</b>15–30 min</span><span><b>Cartas</b>52 (+2 comodines opcional)</span><span><b>Tipo</b>Descarte / familiar</span></div>
+  <p class="intro">El juego del que UNO copió todo. Deshazte de tus cartas siguiendo palo o número; los ochos son comodines.</p>
+  <div class="cols">
+    <h3>Preparación</h3>
+    <p>Reparte 5 cartas a cada jugador (7 si son 2). El resto forma el mazo boca abajo; voltea la primera carta para iniciar la pila de descarte (si es un 8, entiérrala en el mazo y voltea otra).</p>
+    <h3>Cómo se juega</h3>
+    <p>En tu turno juega una carta que coincida en <b>palo</b> o en <b>número</b> con la carta superior de la pila. Un <b>8</b> se puede jugar siempre y quien lo juega declara el palo que sigue.</p>
+    <p>Si no puedes (o no quieres) jugar, roba del mazo hasta que consigas una carta jugable (variante suave: roba solo una y pasa). Si el mazo se acaba, baraja la pila de descarte dejando la carta superior.</p>
+    <h3>Fin y puntuación</h3>
+    <p>La ronda termina cuando alguien se queda sin cartas. Los demás suman lo que tienen en la mano: <b>8 = 50</b>, figuras (J, Q, K) = 10, A = 1, el resto su número. Esos puntos van al ganador de la ronda. Gana la partida el primero en llegar a 100 (con 2 jug.), 150 (3–4) o 200 (5+).</p>
+    <h3>Variante «modo UNO»</h3>
+    <ul>
+      <li><b>2</b>: el siguiente roba 2 (se acumulan si responde con otro 2).</li>
+      <li><b>J</b>: salta al siguiente jugador.</li>
+      <li><b>A</b>: cambia el sentido de la ronda.</li>
+      <li><b>Comodín</b>: el siguiente roba 4 y tú eliges palo.</li>
+      <li>Al quedarte con una carta debes anunciar «¡última!»; si te pillan sin hacerlo, robas 2.</li>
+    </ul>
+    <div class="box"><b>Estrategia.</b> Guarda los ochos para cuando estés atascado, no los quemes al inicio. Cambiar al palo del que tienes más cartas vale más que deshacerte de una figura.</div>
+  </div>
+</article>
+<article class="game" id="02-mentiroso">
+  <div class="gh"><span class="num">02</span><h2>Mentiroso</h2><span class="alias">Cheat · Bullshit · Dudo</span></div>
+  <div class="ficha"><span><b>Jugadores</b>3–8</span><span><b>Edad</b>8+</span><span><b>Duración</b>15–25 min</span><span><b>Cartas</b>52 (+2 comodines opcional)</span><span><b>Tipo</b>Faroleo / fiesta</span></div>
+  <p class="intro">Todos ponen cartas boca abajo diciendo qué son. Nadie está obligado a decir la verdad. Quien acuse mal, carga con la pila.</p>
+  <div class="cols">
+    <h3>Preparación</h3>
+    <p>Reparte todo el mazo aunque queden manos desiguales. Con 6+ jugadores puedes mezclar dos mazos.</p>
+    <h3>Cómo se juega</h3>
+    <p>Quien tenga el <b>A♠</b> empieza colocando boca abajo <b>una o más cartas</b> en el centro y anunciando cuántas y de qué valor: «dos ases». El siguiente jugador debe jugar «doses», el siguiente «treses», y así en orden (A, 2, 3 … K, A). Puedes poner cualquier carta, pero tienes que anunciar el valor que toca.</p>
+    <p>Justo después de un anuncio, <b>cualquier jugador</b> puede gritar «¡Mentiroso!». Se voltean las cartas recién jugadas:</p>
+    <ul>
+      <li>Si <b>había mentira</b> (al menos una carta no es lo anunciado), el mentiroso recoge <b>toda</b> la pila.</li>
+      <li>Si <b>decía la verdad</b>, el acusador recoge toda la pila.</li>
+    </ul>
+    <p>Continúa el jugador a la izquierda del que jugó las cartas, con el siguiente valor. No se puede pasar: siempre hay que jugar algo (mintiendo si hace falta).</p>
+    <h3>Fin</h3>
+    <p>Gana el primero que se queda sin cartas. Ojo: al jugar tu última carta cualquiera puede acusarte, así que conviene que sea verdad.</p>
+    <h3>Variantes</h3>
+    <ul>
+      <li><b>Libre:</b> cada jugador anuncia el valor que quiera, siempre igual, uno más o uno menos que el anterior.</li>
+      <li><b>Comodines:</b> valen como cualquier valor (cuentan como verdad).</li>
+      <li><b>Cuatro iguales:</b> si un jugador tiene las 4 cartas de un valor las muestra y las descarta.</li>
+    </ul>
+    <div class="box"><b>Estrategia.</b> Las mentiras pequeñas (una carta falsa entre tres verdaderas) son casi indetectables. Cuenta: si tú tienes tres reyes y alguien anuncia «dos reyes», la probabilidad está de tu lado.</div>
+  </div>
+</article>
+<article class="game" id="03-palace">
+  <div class="gh"><span class="num">03</span><h2>Palace</h2><span class="alias">Shithead · Karma · Palacio</span></div>
+  <div class="ficha"><span><b>Jugadores</b>2–5</span><span><b>Edad</b>8+</span><span><b>Duración</b>20–30 min</span><span><b>Cartas</b>52</span><span><b>Tipo</b>Descarte / táctico</span></div>
+  <p class="intro">Tres cartas ocultas, tres a la vista y tres en mano. El objetivo es no ser el último con cartas. Los doses y dieces cambian todo.</p>
+  <div class="cols">
+    <h3>Preparación</h3>
+    <p>A cada jugador: <b>3 cartas boca abajo</b> en fila (nadie las mira), <b>3 cartas boca arriba</b> sobre las anteriores y <b>3 en mano</b>. Antes de empezar, cada jugador puede intercambiar cartas de su mano con sus cartas boca arriba (conviene dejar arriba las mejores). El resto es el mazo de robo.</p>
+    <p>Orden de valores: 3 (bajo) 4 5 6 7 8 9 J Q K A (alto). El <b>2</b> y el <b>10</b> son especiales.</p>
+    <h3>Cómo se juega</h3>
+    <p>Empieza quien tenga el 3 más bajo en mano (o el que decidan). En tu turno juega <b>una carta o varias del mismo valor</b> sobre la pila; deben ser de valor <b>igual o mayor</b> a la carta superior. Luego roba hasta tener 3 en mano mientras quede mazo.</p>
+    <ul>
+      <li><b>2</b>: se puede jugar sobre cualquier cosa y «reinicia» la pila: la siguiente carta puede ser cualquiera.</li>
+      <li><b>10</b>: se puede jugar sobre cualquier cosa y <b>quema</b> la pila (se retira del juego). Quien la quemó juega otra vez.</li>
+      <li><b>Cuatro iguales</b> seguidas en la pila (de uno o varios jugadores) también la queman.</li>
+    </ul>
+    <p>Si no puedes jugar, <b>recoges toda la pila</b> a tu mano y pasa el turno.</p>
+    <p>Cuando se acabe el mazo y tu mano quede vacía, juegas con tus <b>cartas boca arriba</b>. Cuando se acaben, juegas las <b>boca abajo a ciegas</b>: volteas una y si no vale, recoges la pila (más esa carta).</p>
+    <h3>Fin</h3>
+    <p>Los jugadores van saliendo al quedarse sin cartas. El último con cartas pierde (y reparte la siguiente).</p>
+    <div class="box"><b>Estrategia.</b> Al inicio pon arriba doses, dieces y ases. En el juego, deshazte de las cartas bajas cuando la pila esté baja y guarda los reinicios para cuando alguien te deje un as.</div>
+  </div>
+</article>
+<article class="game" id="04-presidente">
+  <div class="gh"><span class="num">04</span><h2>Presidente</h2><span class="alias">Culo · Scum · Daifugō</span></div>
+  <div class="ficha"><span><b>Jugadores</b>4–7</span><span><b>Edad</b>8+</span><span><b>Duración</b>30–45 min (varias rondas)</span><span><b>Cartas</b>52 + 2 comodines</span><span><b>Tipo</b>Escalada / social</span></div>
+  <p class="intro">El primero en quedarse sin cartas es Presidente; el último, Pobre. En la siguiente ronda el Pobre entrega sus mejores cartas al Presidente. La injusticia es parte del juego.</p>
+  <div class="cols">
+    <h3>Preparación</h3>
+    <p>Reparte todas las cartas. Orden de valores: 3 (bajo) 4 5 6 7 8 9 10 J Q K A 2 (alto); los <b>comodines</b> superan al 2.</p>
+    <h3>Cómo se juega</h3>
+    <p>En la primera ronda sale quien tenga el 3♣. El jugador que sale juega <b>una carta, una pareja, un trío o un cuarteto</b>. Los siguientes, en orden, deben jugar <b>la misma cantidad de cartas</b> de un valor <b>más alto</b>, o pasar. Pasar no te elimina de la ronda: puedes volver a entrar en tu siguiente turno.</p>
+    <p>Cuando todos pasan seguidos, se recoge la pila y el último que jugó sale de nuevo con lo que quiera.</p>
+    <p>Reglas usuales: un <b>2</b> jugado solo cierra la pila (nadie puede superarlo salvo comodín); un comodín también cierra. Cuatro iguales (bomba) se pueden jugar en cualquier momento y cierran.</p>
+    <h3>Fin de ronda y rangos</h3>
+    <p>Los jugadores salen en orden: <b>Presidente</b>, Vicepresidente, ciudadanos (neutrales), Vicepobre y <b>Pobre</b> (último con cartas).</p>
+    <h3>Siguiente ronda</h3>
+    <ul>
+      <li>El Pobre reparte y entrega sus <b>2 mejores cartas</b> al Presidente, que devuelve <b>2 cualesquiera</b>.</li>
+      <li>El Vicepobre entrega su mejor carta al Vicepresidente, que devuelve 1 cualquiera.</li>
+      <li>Sale el Presidente. El Presidente que pierde su puesto baja a Pobre (regla opcional cruel).</li>
+    </ul>
+    <p>Jueguen un número fijo de rondas o hasta que alguien sea Presidente tres veces.</p>
+    <div class="box"><b>Estrategia.</b> Las cartas bajas sueltas son lo que te hunde: sácalas cuando tengas el control de la salida. Guarda un 2 o comodín para recuperar la iniciativa al final.</div>
+  </div>
+</article>
+<article class="game" id="05-golf">
+  <div class="gh"><span class="num">05</span><h2>Golf</h2><span class="alias">Golf de 6 cartas · «Skyjo con naipes»</span></div>
+  <div class="ficha"><span><b>Jugadores</b>2–6</span><span><b>Edad</b>7+</span><span><b>Duración</b>30–45 min (9 rondas)</span><span><b>Cartas</b>52 + 2 comodines</span><span><b>Tipo</b>Cambio de cartas / familiar</span></div>
+  <p class="intro">Como en el golf, gana el que suma menos. Cada jugador tiene una cuadrícula de 6 cartas boca abajo y va mejorándola carta a carta.</p>
+  <div class="cols">
+    <h3>Preparación</h3>
+    <p>Cada jugador recibe 6 cartas y las pone <b>boca abajo en una cuadrícula de 2 filas × 3 columnas</b> sin mirarlas. Cada uno voltea <b>2 cartas</b> a su elección. El resto es el mazo; voltea una para empezar la pila de descarte.</p>
+    <h3>Valores</h3>
+    <table class="mini">
+      <tr><th>Carta</th><th>Puntos</th></tr>
+      <tr><td>Comodín</td><td>−2</td></tr>
+      <tr><td>2</td><td>−2</td></tr>
+      <tr><td>K</td><td>0</td></tr>
+      <tr><td>A</td><td>1</td></tr>
+      <tr><td>3 a 10</td><td>su número</td></tr>
+      <tr><td>J, Q</td><td>10</td></tr>
+      <tr><td>Columna con 2 cartas del mismo valor</td><td>0 (se anulan)</td></tr>
+    </table>
+    <h3>Cómo se juega</h3>
+    <p>En tu turno, roba la carta superior del <b>mazo</b> o de la pila de <b>descarte</b>. Luego:</p>
+    <ul>
+      <li>Cámbiala por cualquiera de tus 6 cartas (boca arriba o boca abajo) y pon la reemplazada boca arriba en el descarte; la nueva queda <b>boca arriba</b>.</li>
+      <li>O descártala directamente (solo si la robaste del mazo). En ese caso puedes voltear una de tus cartas boca abajo.</li>
+    </ul>
+    <h3>Fin de ronda</h3>
+    <p>Cuando un jugador tiene sus <b>6 cartas boca arriba</b>, los demás juegan <b>un último turno</b>. Se voltean todas las cartas y cada uno suma sus puntos. Si quien cerró la ronda no tiene el puntaje más bajo (o empata), suma <b>+10</b> de penalización (regla opcional que da mucha tensión).</p>
+    <p>Se juegan 9 «hoyos» (rondas). Gana el total más bajo.</p>
+    <div class="box"><b>Estrategia.</b> Emparejar columnas vale más que bajar una carta sola. No cierres la ronda a menos que estés seguro de ir ganando: la penalización duele.</div>
+  </div>
+</article>
+<article class="game" id="06-cabo">
+  <div class="gh"><span class="num">06</span><h2>Cabo</h2><span class="alias">Cambio · Cabo (2010) con naipes</span></div>
+  <div class="ficha"><span><b>Jugadores</b>2–5</span><span><b>Edad</b>8+</span><span><b>Duración</b>30–45 min</span><span><b>Cartas</b>52 + 2 comodines</span><span><b>Tipo</b>Memoria / cambio de cartas</span></div>
+  <p class="intro">Cuatro cartas boca abajo de las que solo conoces dos. Usa los poderes de las cartas para espiar e intercambiar, y grita «¡Cabo!» cuando creas tener la mano más baja.</p>
+  <div class="cols">
+    <h3>Preparación</h3>
+    <p>Cada jugador recibe <b>4 cartas boca abajo en fila</b>. Una sola vez, al inicio, mira <b>2 de ellas</b> y vuelve a dejarlas boca abajo en el mismo sitio. El resto es el mazo; voltea una para el descarte.</p>
+    <h3>Valores</h3>
+    <p>Comodín = <b>0</b> · A = 1 · 2–10 = su número · J = 11 · Q = 12 · K negros = 13 · <b>K rojos = −1</b>.</p>
+    <h3>Turno</h3>
+    <p>Roba la carta superior del mazo <b>o</b> del descarte. Luego elige:</p>
+    <ol>
+      <li><b>Cambiar</b>: sustituye una de tus cartas (sin mirarla si no la conoces) por la robada; la vieja va boca arriba al descarte. Puedes cambiar 2 o más de tus cartas a la vez si crees que son iguales: si aciertas, descártalas todas y quédate con menos cartas; si fallas, las recuperas y además robas una de castigo.</li>
+      <li><b>Descartar</b> la carta robada (solo si vino del mazo). Si es de <b>7 a K</b>, puedes usar su poder:</li>
+    </ol>
+    <table class="mini">
+      <tr><th>Carta</th><th>Poder al descartarla</th></tr>
+      <tr><td>7, 8</td><td>Mira una carta <b>tuya</b>.</td></tr>
+      <tr><td>9, 10</td><td>Mira una carta de <b>otro</b> jugador.</td></tr>
+      <tr><td>J, Q</td><td>Intercambia una carta tuya con una ajena <b>sin mirar</b> ninguna.</td></tr>
+      <tr><td>K</td><td>Mira una carta ajena y <b>decide</b> si la intercambias por una tuya.</td></tr>
+    </table>
+    <h3>Cantar «Cabo»</h3>
+    <p>Al inicio de tu turno, en vez de jugar, puedes decir «<b>Cabo</b>». Los demás juegan <b>un último turno</b> (tus cartas ya no se pueden tocar) y se revelan todas.</p>
+    <h3>Puntuación</h3>
+    <p>Cada uno suma sus cartas. La mano más baja anota <b>0</b>; el resto anota su suma. Si quien cantó Cabo no es el más bajo, anota su suma <b>+10</b>. Se juega a 100 puntos: gana quien tenga menos cuando alguien los supere. Regla clásica: quien cae <b>exactamente en 50 o 100</b> baja su marcador a la mitad.</p>
+    <div class="box"><b>Estrategia.</b> Recordar las cartas ajenas es tan importante como las tuyas: cuando alguien roba del descarte sabes exactamente qué tiene. Cantar Cabo temprano con 6–8 puntos suele ganar.</div>
+  </div>
+</article>
+<article class="game" id="07-manotazo-egipcio">
+  <div class="gh"><span class="num">07</span><h2>Manotazo egipcio</h2><span class="alias">Egyptian Ratscrew · Slap</span></div>
+  <div class="ficha"><span><b>Jugadores</b>2–6</span><span><b>Edad</b>6+</span><span><b>Duración</b>10–20 min</span><span><b>Cartas</b>52</span><span><b>Tipo</b>Reflejos / fiesta</span></div>
+  <p class="intro">Nada de estrategia: se voltean cartas a toda velocidad y cuando aparece una combinación, el primero que golpea la pila se la lleva. Quita anillos antes de jugar.</p>
+  <div class="cols">
+    <h3>Preparación</h3>
+    <p>Reparte todas las cartas boca abajo en montones; nadie mira sus cartas.</p>
+    <h3>Cómo se juega</h3>
+    <p>Por turnos, cada jugador voltea la carta superior de su montón y la pone en la pila central (voltéala <b>hacia afuera</b>, para no verla antes que los demás).</p>
+    <h3>Combinaciones para golpear</h3>
+    <ul>
+      <li><b>Doble</b>: dos cartas seguidas del mismo valor (7, 7).</li>
+      <li><b>Sándwich</b>: mismo valor con una carta en medio (7, Q, 7).</li>
+      <li>Opcionales: <b>suma 10</b> (dos seguidas que sumen 10, A = 1); <b>escalera</b> de 3 seguidas (5, 6, 7 en cualquier orden); <b>matrimonio</b> (K y Q seguidos).</li>
+    </ul>
+    <p>El primero en poner la mano sobre la pila se la lleva y la coloca debajo de su montón. Quien golpea sin motivo entrega una carta al fondo de la pila. Un jugador sin cartas puede seguir en la partida golpeando.</p>
+    <h3>Reto de figuras</h3>
+    <p>Cuando alguien voltea una <b>figura o as</b>, el siguiente jugador debe voltear cartas hasta sacar otra figura/as. Tiene un número limitado de intentos:</p>
+    <table class="mini">
+      <tr><th>Carta</th><th>Intentos</th></tr>
+      <tr><td>J</td><td>1</td></tr>
+      <tr><td>Q</td><td>2</td></tr>
+      <tr><td>K</td><td>3</td></tr>
+      <tr><td>A</td><td>4</td></tr>
+    </table>
+    <p>Si saca una figura, el reto pasa al siguiente jugador. Si agota los intentos sin sacar figura, <b>quien puso la figura se lleva la pila</b>. Los golpes válidos siempre interrumpen un reto.</p>
+    <h3>Fin</h3>
+    <p>Gana quien reúne todas las cartas (o quien más tenga al cabo de 15 minutos).</p>
+    <div class="box"><b>Consejo.</b> Acuerden antes qué combinaciones valen. Con niños, quiten el reto de figuras y jueguen solo con dobles y sándwiches.</div>
+  </div>
+</article>
+<article class="game" id="08-corazones">
+  <div class="gh"><span class="num">08</span><h2>Corazones</h2><span class="alias">Hearts</span></div>
+  <div class="ficha"><span><b>Jugadores</b>3–5 (ideal 4)</span><span><b>Edad</b>10+</span><span><b>Duración</b>45–60 min</span><span><b>Cartas</b>52</span><span><b>Tipo</b>Bazas / evasión</span></div>
+  <p class="intro">Un juego de bazas al revés: aquí ganar bazas es malo, porque los corazones y la Dama de picas dan puntos. Salvo que te los lleves todos.</p>
+  <div class="cols">
+    <h3>Preparación</h3>
+    <p>4 jugadores, 13 cartas cada uno, sin triunfo. Con 3 jugadores retira el 2♦ (17 cada uno); con 5, retira 2♦ y 2♣ (10 cada uno). A (alto) … 2 (bajo).</p>
+    <h3>Pase</h3>
+    <p>Antes de jugar, cada uno elige <b>3 cartas</b> y las pasa boca abajo. Rotación: 1.ª mano a la izquierda, 2.ª a la derecha, 3.ª al de enfrente, 4.ª sin pase; luego se repite.</p>
+    <h3>Cómo se juega</h3>
+    <p>Sale quien tenga el <b>2♣</b>. Es obligatorio <b>asistir al palo</b>; si no tienes, juegas lo que quieras. Gana la baza la carta más alta del palo de salida y ese jugador sale en la siguiente.</p>
+    <ul>
+      <li>En la <b>primera baza</b> no se pueden jugar corazones ni la Q♠ (salvo que no tengas otra cosa).</li>
+      <li>No se puede <b>salir con corazones</b> hasta que alguien haya soltado uno en una baza anterior («romper corazones»), salvo que solo tengas corazones.</li>
+    </ul>
+    <h3>Puntuación</h3>
+    <p>Cada <b>corazón = 1 punto</b>, la <b>Q♠ = 13 puntos</b>. Los puntos son malos. Si un jugador captura <b>los 13 corazones y la Q♠</b> («tirar la luna»), anota 0 y los demás <b>+26</b> cada uno.</p>
+    <p>La partida termina cuando alguien llega a <b>100</b>; gana quien tenga menos puntos.</p>
+    <h3>Variantes comunes</h3>
+    <ul>
+      <li><b>J♦ = −10</b> puntos para quien la capture.</li>
+      <li>Al tirar la luna, el que la tiró puede elegir restarse 26 en lugar de sumar a los demás.</li>
+    </ul>
+    <div class="box"><b>Estrategia.</b> Pasa el A♠ y K♠ si no tienes muchas picas (sino te comerás la Dama). Quedarte «fallo» de un palo te permite tirar corazones cuando ese palo sale. Vigila a quien no suelta corazones: puede estar intentando la luna.</div>
+  </div>
+</article>
+<article class="game" id="09-espadas">
+  <div class="gh"><span class="num">09</span><h2>Espadas</h2><span class="alias">Spades</span></div>
+  <div class="ficha"><span><b>Jugadores</b>4 en parejas</span><span><b>Edad</b>10+</span><span><b>Duración</b>45–60 min</span><span><b>Cartas</b>52</span><span><b>Tipo</b>Bazas / apuesta en equipo</span></div>
+  <p class="intro">Las picas siempre son triunfo. Cada pareja apuesta cuántas bazas hará y luego tiene que cumplirlo: pasarse también se castiga.</p>
+  <div class="cols">
+    <h3>Preparación</h3>
+    <p>Parejas sentadas enfrentadas. 13 cartas cada uno. A (alto) … 2 (bajo). <b>Las picas son triunfo siempre.</b></p>
+    <h3>Apuesta</h3>
+    <p>Empezando por la izquierda del que reparte, cada jugador dice cuántas bazas cree que hará (mínimo 1, o «<b>Nil</b>» = cero). La apuesta de la pareja es la suma de las dos.</p>
+    <h3>Cómo se juega</h3>
+    <p>Sale el jugador a la izquierda del que repartió. Es obligatorio asistir al palo; si no puedes, juegas cualquier carta (incluida una pica, que gana). Gana la baza la pica más alta o, si no hay, la carta más alta del palo de salida. No se puede <b>salir con picas</b> hasta que alguien haya jugado una en otra baza (o solo tengas picas).</p>
+    <h3>Puntuación</h3>
+    <ul>
+      <li>Pareja que <b>cumple</b> su apuesta: <b>10 × apuesta</b> + 1 por cada baza extra («bolsa»).</li>
+      <li>Pareja que <b>no llega</b>: <b>−10 × apuesta</b>.</li>
+      <li><b>Bolsas</b>: cada vez que una pareja acumula 10 bazas extra a lo largo de la partida, pierde <b>100 puntos</b>.</li>
+      <li><b>Nil</b> cumplido: <b>+100</b>; fallido: <b>−100</b>. Las bazas del Nil fallido cuentan como bolsas del compañero. (Apuesta del compañero se evalúa aparte.)</li>
+      <li><b>Nil ciego</b> (apostar cero sin mirar las cartas): ±200.</li>
+    </ul>
+    <p>Gana la primera pareja en llegar a <b>500</b> (o 300 para partidas cortas).</p>
+    <table class="mini">
+      <tr><th>Ejemplo</th><th>Resultado</th></tr>
+      <tr><td>Apuesta 5, hacen 6</td><td>+51 (y 1 bolsa)</td></tr>
+      <tr><td>Apuesta 5, hacen 4</td><td>−50</td></tr>
+      <tr><td>Nil + 3, hacen 0 y 4</td><td>+100 +31 (1 bolsa)</td></tr>
+    </table>
+    <div class="box"><b>Estrategia.</b> Cuenta un punto por cada as y rey fuera de picas, y una baza por cada pica a partir de la tercera. Apuesta con cautela: ir 1 corta rara vez cuesta más que pasarse repetidamente.</div>
+  </div>
+</article>
+<article class="game" id="10-apuesta-exacta">
+  <div class="gh"><span class="num">10</span><h2>Apuesta exacta</h2><span class="alias">Oh Hell · Nomination Whist · «Skull King / Wizard casero»</span></div>
+  <div class="ficha"><span><b>Jugadores</b>3–7</span><span><b>Edad</b>10+</span><span><b>Duración</b>30–45 min</span><span><b>Cartas</b>52 + 2 comodines</span><span><b>Tipo</b>Bazas / apuesta exacta</span></div>
+  <p class="intro">El motor de Skull King y Wizard ya existía con naipes: apuesta cuántas bazas harás y acierta exactamente. Ni una más, ni una menos.</p>
+  <div class="cols">
+    <h3>Preparación</h3>
+    <p>Se juegan varias manos con un número <b>cambiante</b> de cartas. Sugerido: empieza con 1 carta, sube hasta el máximo (10 con 4–5 jugadores, 7 con 7) y vuelve a bajar hasta 1. Cada mano, tras repartir, voltea la carta siguiente del mazo: su palo es el <b>triunfo</b>. Sin carta sobrante (mano máxima), se juega sin triunfo.</p>
+    <p>Los 2 <b>comodines</b> son «magos»: siempre ganan la baza (si salen dos, gana el primero jugado). Se pueden jugar aunque tengas el palo de salida. Si sales con comodín, el siguiente jugador decide el palo.</p>
+    <h3>Apuesta</h3>
+    <p>Empezando a la izquierda del repartidor, cada jugador anuncia cuántas bazas hará (de 0 al número de cartas). Regla del «<b>reparte y fastidia</b>»: el repartidor apuesta último y <b>no puede</b> elegir una cifra que haga que la suma de apuestas sea igual al número de bazas; así alguien fallará seguro.</p>
+    <h3>Cómo se juega</h3>
+    <p>Sale la izquierda del repartidor. Obligatorio asistir al palo; sin palo, cualquier carta. Gana la baza el triunfo más alto o, si no hay, la carta más alta del palo de salida. El ganador sale en la siguiente.</p>
+    <h3>Puntuación</h3>
+    <ul>
+      <li>Acertar exactamente: <b>10 + bazas hechas</b> (acertar 0 = 10 puntos).</li>
+      <li>Fallar: <b>−10 por cada baza de diferencia</b> (variante suave: simplemente 0).</li>
+    </ul>
+    <p>Gana quien tenga más puntos al acabar todas las manos. Anoten en una tabla: jugadores en columnas, manos en filas, apuesta / bazas / total.</p>
+    <div class="box"><b>Estrategia.</b> Con pocas cartas todo es azar: apuesta 0 salvo con as o triunfo. Con muchas, contar triunfos jugados decide la partida. Si vas pasado, «pierde» bazas jugando altas cuando no hay peligro.</div>
+  </div>
+</article>
+<article class="game" id="11-euchre">
+  <div class="gh"><span class="num">11</span><h2>Euchre</h2><span class="alias">Euchre · el juego de bazas de Norteamérica</span></div>
+  <div class="ficha"><span><b>Jugadores</b>4 en parejas</span><span><b>Edad</b>10+</span><span><b>Duración</b>30–40 min</span><span><b>Cartas</b>24 (9 a A de cada palo)</span><span><b>Tipo</b>Bazas / parejas</span></div>
+  <p class="intro">Manos de 5 cartas y bazas rapidísimas. La gracia: las dos jotas del color del triunfo son las cartas más altas y la del otro palo cambia de palo.</p>
+  <div class="cols">
+    <h3>Preparación</h3>
+    <p>Usa solo <b>9, 10, J, Q, K, A</b> de cada palo (24 cartas). Reparte 5 a cada jugador; deja 4 en el centro y voltea la superior (la «vuelta»).</p>
+    <h3>Rango de las cartas</h3>
+    <p>En el palo de triunfo: <b>J de triunfo</b> («bower derecho») &gt; <b>J del otro palo del mismo color</b> («bower izquierdo», cuenta como triunfo) &gt; A &gt; K &gt; Q &gt; 10 &gt; 9. En los otros palos: A K Q J 10 9. Ejemplo: triunfo ♥ → J♥, J♦, A♥, K♥, Q♥, 10♥, 9♥ son los triunfos y el palo ♦ queda con 5 cartas.</p>
+    <h3>Elegir triunfo</h3>
+    <ol>
+      <li>Empezando a la izquierda del repartidor, cada uno puede <b>ordenar</b> que el palo de la vuelta sea triunfo o pasar. Si alguien ordena, el repartidor toma la vuelta y descarta una carta.</li>
+      <li>Si los 4 pasan, se voltea la carta y en una segunda ronda cada uno puede <b>nombrar cualquier otro palo</b> o pasar. Si nadie nombra, se reparte de nuevo.</li>
+    </ol>
+    <p>La pareja que eligió el triunfo son los «<b>fabricantes</b>». Quien elige puede decir «<b>voy solo</b>»: su compañero deja las cartas y juega él contra los dos rivales.</p>
+    <h3>Juego</h3>
+    <p>Sale la izquierda del repartidor (o la izquierda del que va solo). Asistir al palo es obligatorio (recuerda que el bower izquierdo es triunfo). Gana la baza el triunfo más alto o la carta más alta del palo de salida.</p>
+    <h3>Puntuación</h3>
+    <table class="mini">
+      <tr><th>Resultado</th><th>Puntos</th></tr>
+      <tr><td>Fabricantes hacen 3 o 4 bazas</td><td>1</td></tr>
+      <tr><td>Fabricantes hacen 5 bazas</td><td>2</td></tr>
+      <tr><td>Fabricante solo hace 5 bazas</td><td>4</td></tr>
+      <tr><td>Fabricantes hacen menos de 3 («euchre»)</td><td>2 para los rivales</td></tr>
+    </table>
+    <p>Gana la primera pareja en llegar a <b>10</b>.</p>
+    <div class="box"><b>Estrategia.</b> Ordena triunfo con 3 triunfos o 2 triunfos + as. No pases al repartidor un triunfo fuerte en la vuelta si tú puedes usarlo. Ir solo con J J A de triunfo casi garantiza 4 puntos.</div>
+  </div>
+</article>
+<article class="game" id="12-durak">
+  <div class="gh"><span class="num">12</span><h2>Durak</h2><span class="alias">Дурак · «el tonto»</span></div>
+  <div class="ficha"><span><b>Jugadores</b>2–6</span><span><b>Edad</b>8+</span><span><b>Duración</b>20–30 min</span><span><b>Cartas</b>36 (6 a A de cada palo)</span><span><b>Tipo</b>Ataque y defensa</span></div>
+  <p class="intro">El juego de cartas más popular de Rusia. No hay ganador: hay un perdedor, el «durak», que es el último con cartas en la mano.</p>
+  <div class="cols">
+    <h3>Preparación</h3>
+    <p>Usa <b>6, 7, 8, 9, 10, J, Q, K, A</b> de cada palo (36 cartas). Reparte 6 a cada uno. Voltea la carta inferior del mazo y déjala visible bajo él: su palo es el <b>triunfo</b>. Rango: A K Q J 10 9 8 7 6.</p>
+    <h3>Cómo se juega</h3>
+    <p>Empieza atacando quien tenga el triunfo más bajo; el <b>defensor</b> es el jugador a su izquierda.</p>
+    <ol>
+      <li>El atacante pone una carta boca arriba frente al defensor.</li>
+      <li>El defensor debe <b>cubrirla</b> con una carta más alta del mismo palo o con un triunfo (un triunfo solo se cubre con triunfo más alto).</li>
+      <li>El atacante (y, en partidas de 3+, cualquier otro jugador que no sea el defensor) puede <b>añadir</b> más cartas de ataque, pero solo de <b>valores que ya estén en la mesa</b> (atacadas o de defensa). Máximo 6 cartas de ataque, y nunca más de las que el defensor tiene en la mano.</li>
+    </ol>
+    <p>El ataque termina cuando: a) el defensor <b>cubre todas</b> las cartas → todas se descartan boca abajo y el defensor pasa a ser atacante; o b) el defensor <b>se rinde</b> y recoge todas las cartas de la mesa → pierde su turno de ataque, ataca el siguiente jugador.</p>
+    <p>Después de cada ataque, todos reponen su mano a 6 cartas <b>del mazo</b>, en orden: primero el atacante, luego los demás atacantes, y el defensor al final. La carta de triunfo visible es la última en robarse.</p>
+    <h3>Fin</h3>
+    <p>Cuando el mazo se acaba, ya no se repone. Los jugadores que se quedan sin cartas salen del juego. El último con cartas es el <b>durak</b> y reparte la siguiente partida.</p>
+    <h3>Variantes</h3>
+    <ul>
+      <li><b>Transferible (perevodnoy)</b>: si el defensor tiene una carta del mismo valor que la atacada, puede ponerla y pasar la defensa al siguiente jugador.</li>
+      <li><b>Con 52 cartas</b> para 5–6 jugadores (rango 2 a A).</li>
+    </ul>
+    <div class="box"><b>Estrategia.</b> Al inicio ataca con cartas bajas para deshacerte de ellas y guarda triunfos para el final, cuando el mazo se agota y ya no hay repuesto. Rendirse temprano con pocas cartas malas es mejor que gastar triunfos.</div>
+  </div>
+</article>
+<article class="game" id="13-gin-rummy">
+  <div class="gh"><span class="num">13</span><h2>Gin Rummy</h2><span class="alias">Gin</span></div>
+  <div class="ficha"><span><b>Jugadores</b>2</span><span><b>Edad</b>10+</span><span><b>Duración</b>30–60 min</span><span><b>Cartas</b>52</span><span><b>Tipo</b>Rummy / combinaciones</span></div>
+  <p class="intro">El mejor rummy para dos. Forma grupos y escaleras y cierra («toca») cuando tus cartas sueltas sumen poco. Cerrar demasiado pronto o demasiado tarde: ese es el juego.</p>
+  <div class="cols">
+    <h3>Preparación</h3>
+    <p>10 cartas a cada uno. El resto es el mazo; voltea la primera carta como descarte. Valores: A = 1, figuras = 10, resto su número. El as solo es bajo (A-2-3 sí; Q-K-A no).</p>
+    <h3>Combinaciones</h3>
+    <ul>
+      <li><b>Grupo</b>: 3 o 4 cartas del mismo valor.</li>
+      <li><b>Escalera</b>: 3 o más cartas seguidas del mismo palo.</li>
+    </ul>
+    <p>Las cartas que no están en ninguna combinación son el <b>«deadwood»</b> (sobrantes).</p>
+    <h3>Turno</h3>
+    <p>Roba la carta superior del mazo o del descarte, y luego descarta una carta boca arriba. En el primer turno, el que no repartió puede tomar el descarte inicial o pasar; si pasa, el repartidor decide; si ambos pasan, el no repartidor roba del mazo.</p>
+    <h3>Cerrar</h3>
+    <ul>
+      <li><b>Tocar</b>: al descartar, si tus sobrantes suman <b>10 o menos</b>, muestra tus combinaciones y sobrantes. El rival muestra las suyas y puede <b>añadir sus sobrantes a tus combinaciones</b> («lay off») para reducir su cuenta.</li>
+      <li><b>Gin</b>: cierras con <b>0 sobrantes</b>. El rival no puede añadir cartas.</li>
+    </ul>
+    <p>Si solo quedan 2 cartas en el mazo y nadie ha cerrado, la mano queda anulada.</p>
+    <h3>Puntuación</h3>
+    <table class="mini">
+      <tr><th>Situación</th><th>Puntos</th></tr>
+      <tr><td>Tocas y tus sobrantes son menores</td><td>Diferencia de sobrantes</td></tr>
+      <tr><td>Gin</td><td>Sobrantes del rival + <b>25</b></td></tr>
+      <tr><td>Tocas pero el rival iguala o tiene menos («undercut»)</td><td>Rival: diferencia + <b>25</b></td></tr>
+    </table>
+    <p>Se juega a <b>100</b>. Al final: +25 por cada mano ganada (cajas) y +100 al ganador; si el perdedor no ganó ninguna mano, el ganador dobla.</p>
+    <div class="box"><b>Estrategia.</b> En las primeras 4–5 vueltas descarta figuras sueltas: pesan 10. A partir de la mitad del mazo, toca en cuanto puedas; esperar el gin suele costar un undercut.</div>
+  </div>
+</article>
+<article class="game" id="14-casino">
+  <div class="gh"><span class="num">14</span><h2>Casino</h2><span class="alias">Cassino · Casita</span></div>
+  <div class="ficha"><span><b>Jugadores</b>2–4</span><span><b>Edad</b>9+</span><span><b>Duración</b>30–45 min</span><span><b>Cartas</b>52</span><span><b>Tipo</b>Captura / aritmética</span></div>
+  <p class="intro">Hay cartas en la mesa y cartas en tu mano; captura las de la mesa con una carta igual o con una que sume lo que necesitas. Las «construcciones» lo convierten en un juego de anticipación.</p>
+  <div class="cols">
+    <h3>Preparación</h3>
+    <p>Reparte 4 cartas a cada jugador y <b>4 boca arriba en la mesa</b>. Cuando todos se quedan sin cartas, el repartidor reparte 4 más a cada uno (ya no a la mesa) hasta agotar el mazo. Valores: A = 1, 2–10 su número; las figuras no tienen valor numérico.</p>
+    <h3>Turno: juega una carta de tu mano</h3>
+    <ol>
+      <li><b>Capturar</b>: toma de la mesa una o más cartas del <b>mismo valor</b> que la jugada, y/o <b>grupos de cartas cuya suma</b> sea ese valor. Ej.: con un 8 capturas un 8, un 5+3 y un 6+2 a la vez. Las figuras solo capturan figuras iguales (una por turno; con dos reyes en mesa te llevas uno). Guarda lo capturado boca abajo.</li>
+      <li><b>Construir</b>: combina tu carta con cartas de la mesa formando una suma y anúnciala («construyo 9») — solo si tienes en la mano una carta de ese valor para capturarla después. Otro jugador puede capturar tu construcción o aumentarla (ej. añade un A y dice «10») si tiene un 10.</li>
+      <li><b>Descartar</b>: deja la carta en la mesa boca arriba.</li>
+    </ol>
+    <p>Si tienes una construcción en la mesa <b>no puedes</b> descartar: debes capturarla, aumentarla o hacer otra jugada de captura.</p>
+    <h3>Fin y puntuación</h3>
+    <p>Quien hizo la <b>última captura</b> se lleva lo que quede en la mesa. Luego se cuenta:</p>
+    <table class="mini">
+      <tr><th>Concepto</th><th>Puntos</th></tr>
+      <tr><td>Más cartas capturadas</td><td>3</td></tr>
+      <tr><td>Más picas</td><td>1</td></tr>
+      <tr><td>10♦ («gran casino»)</td><td>2</td></tr>
+      <tr><td>2♠ («pequeño casino»)</td><td>1</td></tr>
+      <tr><td>Cada as</td><td>1</td></tr>
+      <tr><td>Cada «barrida» (dejar la mesa vacía)</td><td>1</td></tr>
+    </table>
+    <p>11 puntos por mano (más barridas). Se juega a <b>21</b>.</p>
+    <div class="box"><b>Estrategia.</b> Los ases y el 10♦ valen más que muchas cartas: no los descartes a la mesa. Cuenta las cartas de un valor jugadas; construir 10 cuando ya salieron tres dieces es regalar.</div>
+  </div>
+</article>
+<article class="game" id="15-cribbage">
+  <div class="gh"><span class="num">15</span><h2>Cribbage</h2><span class="alias">Crib · sin tablero, con papel</span></div>
+  <div class="ficha"><span><b>Jugadores</b>2 (3–4 con variantes)</span><span><b>Edad</b>10+</span><span><b>Duración</b>30–40 min</span><span><b>Cartas</b>52 + papel y lápiz</span><span><b>Tipo</b>Combinaciones / conteo</span></div>
+  <p class="intro">Puntúas por sumar quince, por parejas, por escaleras… primero al jugar cartas alternadas y luego al mostrar la mano. El tablero es solo un marcador: anoten en papel.</p>
+  <div class="cols">
+    <h3>Preparación</h3>
+    <p>6 cartas a cada uno. Cada jugador pasa <b>2 cartas boca abajo</b> a la «<b>crib</b>» (mano extra que puntúa para el repartidor). El no repartidor corta el mazo y se voltea la carta superior: la «<b>salida</b>». Si es una J, el repartidor anota 2. Valores: A = 1, figuras = 10, resto su número. Las escaleras siguen el orden A 2 3 … J Q K.</p>
+    <h3>Fase 1: el juego</h3>
+    <p>Empezando por el no repartidor, alternan jugando una carta boca arriba delante de sí y diciendo la <b>suma acumulada</b> (no puede pasar de 31). Se anota al vuelo:</p>
+    <table class="mini">
+      <tr><th>Al jugar…</th><th>Puntos</th></tr>
+      <tr><td>La suma llega exactamente a 15</td><td>2</td></tr>
+      <tr><td>La suma llega exactamente a 31</td><td>2</td></tr>
+      <tr><td>Misma carta que la anterior (pareja)</td><td>2 (trío 6, cuarteta 12)</td></tr>
+      <tr><td>Las últimas 3+ cartas forman escalera (cualquier orden)</td><td>1 por carta</td></tr>
+      <tr><td>El rival no puede jugar sin pasar de 31 («go») y tú juegas la última</td><td>1</td></tr>
+    </table>
+    <p>Cuando nadie puede jugar, la suma vuelve a 0 y sigue quien no jugó la última carta. Se continúa hasta agotar las 8 cartas.</p>
+    <h3>Fase 2: la muestra</h3>
+    <p>Cada uno recoge sus 4 cartas y las puntúa junto con la salida (5 cartas). Primero el no repartidor, luego el repartidor, y por último el repartidor puntúa la crib.</p>
+    <table class="mini">
+      <tr><th>Combinación</th><th>Puntos</th></tr>
+      <tr><td>Cada grupo de cartas que suma 15</td><td>2</td></tr>
+      <tr><td>Pareja</td><td>2 (trío 6, cuarteta 12)</td></tr>
+      <tr><td>Escalera de 3, 4, 5</td><td>3, 4, 5 (dobles se cuentan dos veces)</td></tr>
+      <tr><td>Las 4 de la mano del mismo palo</td><td>4 (5 si la salida coincide; en la crib solo vale con 5)</td></tr>
+      <tr><td>J del palo de la salida («nob»)</td><td>1</td></tr>
+    </table>
+    <p>Ejemplo: 5♥ 5♠ 10♣ J♦ + salida 5♦ → quinces: cada 5 con el 10 (3), cada 5 con la J (3) y 5+5+5 (1) = 7 quinces = 14 puntos; trío de cincos = 6. Total <b>20</b>.</p>
+    <h3>Fin</h3>
+    <p>Gana quien llega a <b>121</b> (o 61 para partida corta). Se anotan puntos en el momento: el que cruza la meta durante el juego gana aunque el otro fuese a puntuar más. Anoten en dos columnas y sumen acumulado.</p>
+    <div class="box"><b>Estrategia.</b> Como no repartidor, nunca pongas cincos ni parejas en la crib rival. Al jugar, evita dejar la suma en 5 o 21 (permite un 10 para hacer 15 o 31).</div>
+  </div>
+</article>
+<article class="game" id="16-regicide">
+  <div class="gh"><span class="num">16</span><h2>Regicide <span class="tag coop">Cooperativo</span></h2><span class="alias">Badgers from Mars, 2020 · reglas para naipes estándar</span></div>
+  <div class="ficha"><span><b>Jugadores</b>1–4</span><span><b>Edad</b>10+</span><span><b>Duración</b>20–40 min</span><span><b>Cartas</b>52 + comodines (bufones)</span><span><b>Tipo</b>Cooperativo / gestión de mano</span></div>
+  <p class="intro" style="font-size:9.8pt">Los jugadores unen fuerzas para derrotar a 12 monarcas corruptos: 4 jotas, 4 reinas y 4 reyes. Cada palo tiene un poder. Es difícil, tenso y el mejor argumento de que un mazo simple da para un juego moderno.</p>
+  <div class="cols" style="font-size:9.3pt">
+    <h3>Preparación</h3>
+    <ol>
+      <li><b>Castillo</b>: baraja los 4 K y ponlos boca abajo; encima los 4 Q barajados; encima los 4 J barajados. Voltea el primer J: es el enemigo actual.</li>
+      <li><b>Taberna</b> (mazo de robo): baraja los números 2–10, los ases y los <b>bufones</b> (comodines) según jugadores: 1 jug. → 2 bufones; 2 → 0; 3 → 1; 4 → 2.</li>
+      <li>Mano inicial / máximo de mano: 1 jug. <b>8</b>, 2 jug. <b>7</b>, 3 jug. <b>6</b>, 4 jug. <b>5</b>.</li>
+    </ol>
+    <table class="mini">
+      <tr><th>Enemigo</th><th>Vida</th><th>Ataque</th></tr>
+      <tr><td>J</td><td>20</td><td>10</td></tr>
+      <tr><td>Q</td><td>30</td><td>15</td></tr>
+      <tr><td>K</td><td>40</td><td>20</td></tr>
+    </table>
+    <p>Valores de ataque: A = 1, números = su número. Cada enemigo es <b>inmune al poder de su propio palo</b> (un J♣ ignora el doble daño de los tréboles, pero el valor numérico sí cuenta).</p>
+    <h3>Turno (4 pasos)</h3>
+    <p><b>1. Jugar cartas.</b> Elige una opción:</p>
+    <ul>
+      <li>Una sola carta.</li>
+      <li>Un <b>as</b> («compañero animal») junto con otra carta cualquiera: se suman valores y se activan ambos palos.</li>
+      <li>Un <b>combo</b> de 2 a 4 cartas del <b>mismo número</b> cuya suma sea <b>≤ 10</b> (2-2-2-2, 3-3-3, 5-5, pero no 6-6). Se activan todos los palos con el valor total.</li>
+      <li>Un <b>bufón</b> solo (ver abajo).</li>
+    </ul>
+    <p><b>2. Activar poderes</b> (usando el valor total jugado; se pueden activar en cualquier orden, ♥ antes que ♦):</p>
+    <table class="mini">
+      <tr><td><b class="red">♥</b> Curar</td><td>Baraja la pila de descarte y pasa tantas cartas como el valor al <b>fondo</b> de la taberna, boca abajo.</td></tr>
+      <tr><td><b class="red">♦</b> Robar</td><td>Los jugadores roban tantas cartas como el valor, una por vez en orden, empezando por ti; se salta a quien tenga la mano llena.</td></tr>
+      <tr><td><b>♣</b> Doble daño</td><td>El daño de esta jugada se <b>duplica</b>.</td></tr>
+      <tr><td><b>♠</b> Escudo</td><td>Reduce el ataque del enemigo actual en el valor jugado. Es <b>acumulativo</b> mientras dure ese enemigo.</td></tr>
+    </table>
+    <p><b>3. Hacer daño.</b> Resta el valor (doblado si hubo ♣) de la vida del enemigo. Si llega a <b>0 exacto</b>, el enemigo va <b>boca abajo encima de la taberna</b> (lo reclutas); si baja de 0, va a la pila de descarte. Voltea el siguiente enemigo, descarta las cartas jugadas contra el anterior y <b>salta el paso 4</b>.</p>
+    <p><b>4. Sufrir el ataque.</b> El enemigo te ataca con su ataque menos los escudos ♠ acumulados. Descarta cartas de tu mano cuyo valor sume <b>al menos</b> ese daño (bufón = 0). Si no puedes, <b>el grupo pierde</b>. Puedes sufrir 0 de daño con la mano vacía, pero no puedes sufrir daño &gt; 0 sin cartas.</p>
+    <p>Las cartas jugadas contra un enemigo se quedan en la mesa frente a él hasta derrotarlo (los escudos siguen contando).</p>
+    <h3>Bufón (comodín)</h3>
+    <p>Se juega solo, sin valor. Anula la <b>inmunidad</b> del enemigo actual durante el resto del combate. Después, quien lo jugó elige <b>quién toma el siguiente turno</b> (cualquiera, incluso él mismo). Regla de comunicación durante toda la partida: nadie puede decir qué cartas tiene; solo cosas vagas como «tengo una jugada grande» o «no puedo con esto». Con el bufón jugado, cada jugador puede además decir si quiere o no el siguiente turno.</p>
+    <p><b>Solitario</b>: el bufón funciona distinto: descarta toda tu mano y roba 8.</p>
+    <h3>Ceder</h3>
+    <p>En lugar de jugar cartas puedes «<b>ceder</b>»: pasas directamente al paso 4 y sufres el ataque. No pueden ceder todos los jugadores seguidos: si todos los demás ya cedieron, tú debes jugar.</p>
+    <h3>Fin</h3>
+    <p><b>Victoria</b> al derrotar a los 12 enemigos. <b>Derrota</b> si un jugador no puede sufrir el daño o si la taberna se agota y alguien debe robar (variante estricta; la oficial solo pierde por daño).</p>
+    <div class="box"><b>Estrategia.</b> Los ♠ pronto son oro contra reyes. Combos pequeños de ♦ (2-2 ♦) reponen manos a todos. Intenta matar de 0 exacto a un enemigo de palo útil: vuelve a la taberna como una carta de valor 10 (J), 15 (Q) o 20 (K) con su palo.</div>
+  </div>
+</article>
+<article class="game" id="17-trio">
+  <div class="gh"><span class="num">17</span><h2>Trio <span class="tag adapt">Adaptación</span></h2><span class="alias">Trio / Nana (Kaï Sakurai, 2021) con naipes</span></div>
+  <div class="ficha"><span><b>Jugadores</b>3–6</span><span><b>Edad</b>7+</span><span><b>Duración</b>15–20 min</span><span><b>Cartas</b>36 (A a Q de tres palos)</span><span><b>Tipo</b>Memoria / deducción</span></div>
+  <p class="intro">El original trae 36 cartas numeradas del 1 al 12, tres de cada. Con un mazo estándar es idéntico: usa A–Q de tres palos y olvida los palos.</p>
+  <div class="cols">
+    <h3>Preparación</h3>
+    <p>Retira un palo completo y los 4 reyes. Quedan <b>36 cartas</b>: tres de cada valor A(1)…Q(12). Baraja y reparte según jugadores; las cartas sobrantes van <b>boca abajo en el centro</b>, separadas.</p>
+    <table class="mini">
+      <tr><th>Jugadores</th><th>En mano</th><th>En el centro</th></tr>
+      <tr><td>3</td><td>9</td><td>9</td></tr>
+      <tr><td>4</td><td>7</td><td>8</td></tr>
+      <tr><td>5</td><td>6</td><td>6</td></tr>
+      <tr><td>6</td><td>5</td><td>6</td></tr>
+    </table>
+    <p>Cada jugador <b>ordena su mano de menor a mayor</b> y la mantiene oculta.</p>
+    <h3>Turno</h3>
+    <p>Revela cartas una por una, con estas opciones en cada revelación:</p>
+    <ul>
+      <li>Pide a <b>cualquier jugador (incluido tú)</b> que muestre su carta <b>más baja</b> o su carta <b>más alta</b>.</li>
+      <li>O voltea <b>una carta del centro</b>.</li>
+    </ul>
+    <p>Si la carta revelada tiene el <b>mismo valor</b> que la anterior de este turno, sigues revelando. Si es <b>distinta</b>, tu turno termina: las cartas de mano vuelven a su dueño (en su sitio) y las del centro se vuelven a poner boca abajo <b>en el mismo lugar</b>.</p>
+    <p>Si consigues <b>tres del mismo valor</b>, formas un <b>trío</b>: colócalo frente a ti boca arriba. Tu turno termina.</p>
+    <h3>Fin</h3>
+    <p>Gana quien consigue <b>3 tríos</b>. Victoria instantánea: el trío de <b>7</b>.</p>
+    <h3>Variante «picante»</h3>
+    <p>Gana quien reúne <b>2 tríos conectados</b> (valores consecutivos, como 4 y 5, o 12 y 1) o el trío de 7. Más rápida y más tensa.</p>
+    <h3>Variante por equipos (4 o 6)</h3>
+    <p>Los compañeros se sientan enfrentados; los tríos se comparten. Ganan con 3 tríos del equipo.</p>
+    <div class="box"><b>Estrategia.</b> Cuando revelas la carta más baja de alguien y no es la que buscabas, has aprendido algo para siempre: esa carta seguirá siendo su mínima hasta que forme un trío. Pide a quien ya tuvo que mostrar sus extremos y deduce el resto.</div>
+  </div>
+</article>
+<article class="game" id="18-siete-a-la-vista">
+  <div class="gh"><span class="num">18</span><h2>Siete a la vista <span class="tag adapt">Adaptación</span></h2><span class="alias">Flip 7 (Eric Olsen, 2024) con naipes</span></div>
+  <div class="ficha"><span><b>Jugadores</b>3–8</span><span><b>Edad</b>8+</span><span><b>Duración</b>15–25 min</span><span><b>Cartas</b>52 + 2 comodines</span><span><b>Tipo</b>Presiona tu suerte</span></div>
+  <p class="intro">Pide cartas mientras te atrevas; si repites un valor, pierdes todo lo de la ronda. Llegar a siete valores distintos da bonus y cierra la ronda. Esta versión casera reproduce la mecánica con un mazo estándar.</p>
+  <div class="cols">
+    <h3>Diferencias con el original</h3>
+    <p>Flip 7 trae cartas del 0 al 12 donde cada número aparece tantas veces como su valor (un 0, un 1, dos 2… doce 12), así que las cartas altas son más comunes y más peligrosas. Con naipes hay 4 de cada valor, por lo que el riesgo es parejo. Para acercarlo al original, usa el <b>modo acciones</b> de abajo.</p>
+    <h3>Valores</h3>
+    <p>A = 1 · 2–10 = su número · J = 11 · Q = 12 · <b>K = 13</b> (o acción, ver abajo) · Comodín = «segunda oportunidad».</p>
+    <h3>Ronda</h3>
+    <ol>
+      <li>El repartidor da <b>una carta boca arriba</b> a cada jugador (delante de él, no en mano).</li>
+      <li>Por turnos, cada jugador activo dice «<b>otra</b>» o «<b>me planto</b>». Si pide otra, el repartidor le voltea una carta delante.</li>
+      <li>Si recibe un valor que <b>ya tiene</b> → <b>se quema</b>: descarta todas sus cartas y anota 0 esta ronda.</li>
+      <li>Quien se planta conserva sus cartas y deja de recibir.</li>
+      <li>Si un jugador llega a <b>7 cartas de valores distintos</b>, anota un <b>bonus de +15</b> y la ronda termina inmediatamente para todos.</li>
+    </ol>
+    <p>La ronda también termina cuando todos se plantaron o quemaron. Cada jugador no quemado suma el valor de sus cartas (+15 si hizo siete).</p>
+    <h3>Segunda oportunidad (comodín)</h3>
+    <p>Si te reparten un comodín, déjalo delante. Cuando te salga un valor repetido, descarta el comodín junto con la carta repetida y sigues en juego. Solo puedes tener un comodín: si te sale otro, dáselo a un jugador activo que no tenga; si nadie puede recibirlo, se descarta.</p>
+    <h3>Modo acciones (recomendado)</h3>
+    <p>Los reyes no valen puntos; son acciones que se resuelven al instante y luego se descartan:</p>
+    <ul>
+      <li><b>K negro = Congelar</b>: elige un jugador activo (incluido tú): se planta obligatoriamente y anota lo que tenga.</li>
+      <li><b>K rojo = Tres seguidas</b>: elige un jugador activo (incluido tú): recibe <b>3 cartas seguidas</b> sin poder plantarse (si se quema, se quema).</li>
+    </ul>
+    <p>Para más sabor: las <b>Q</b> valen ×2 sobre tu suma de números (solo una cuenta).</p>
+    <h3>Fin</h3>
+    <p>Gana el primero en llegar a <b>200 puntos</b> (150 con 6+ jugadores). El repartidor rota cada ronda.</p>
+    <div class="box"><b>Estrategia.</b> Con 4 cartas distintas, la probabilidad de quemarte en la siguiente es de aproximadamente 4×3/48 ≈ 25%, y sube rápido: con 6 cartas ya es casi el 40%. Plántate en 4–5 salvo que vayas perdiendo por mucho.</div>
+  </div>
+</article>
+<article class="game" id="19-la-mente">
+  <div class="gh"><span class="num">19</span><h2>La Mente <span class="tag coop">Cooperativo</span> <span class="tag adapt">Adaptación</span></h2><span class="alias">The Mind (Wolfgang Warsch, 2018) con naipes</span></div>
+  <div class="ficha"><span><b>Jugadores</b>2–4</span><span><b>Edad</b>8+</span><span><b>Duración</b>15–25 min</span><span><b>Cartas</b>52 (sin comodines)</span><span><b>Tipo</b>Cooperativo / sincronía</span></div>
+  <p class="intro">El original usa cartas del 1 al 100 y una sola regla: jueguen todas las cartas en orden ascendente sin comunicarse. Con 52 cartas ordenadas funciona igual de bien (y de mal).</p>
+  <div class="cols">
+    <h3>Orden de las 52 cartas</h3>
+    <p>Se ordenan primero por número y luego por palo: <b>♣ &lt; ♦ &lt; ♥ &lt; ♠</b>. Así, 2♣ es la carta más baja, 2♦ la siguiente, … A♠ la más alta. Regla mental: «tréboles, diamantes, corazones, picas» (orden alfabético en inglés: clubs, diamonds, hearts, spades).</p>
+    <h3>Preparación</h3>
+    <p>El grupo comparte <b>vidas</b> y <b>estrellas</b>. Anótenlas en papel: vidas iniciales = número de jugadores; estrellas iniciales = 1. Se juega por <b>niveles</b>: en el nivel N cada jugador recibe N cartas.</p>
+    <table class="mini">
+      <tr><th>Jugadores</th><th>Niveles a superar</th></tr>
+      <tr><td>2</td><td>12</td></tr>
+      <tr><td>3</td><td>10</td></tr>
+      <tr><td>4</td><td>8</td></tr>
+    </table>
+    <h3>Cómo se juega</h3>
+    <p>Sin hablar, sin señas, sin tocarse. Cualquier jugador, cuando sienta que es el momento, pone una carta boca arriba en el centro. El objetivo es que <b>todas</b> las cartas del nivel se jueguen en orden ascendente.</p>
+    <p>Si alguien juega una carta y otro jugador todavía tiene una <b>más baja</b> en la mano: el grupo pierde <b>1 vida</b> y todos descartan sus cartas más bajas que la jugada (se «resuelve» el error). Con 0 vidas, pierden.</p>
+    <p><b>Estrella</b>: cualquier jugador puede levantar la mano proponiendo usar una estrella; si todos aceptan (también en silencio), se gasta y cada uno descarta boca arriba su carta <b>más baja</b>.</p>
+    <p>Al completar un nivel, se recogen todas las cartas, se baraja, y se reparte el siguiente nivel. Bonus por completar niveles: nivel 2, 5, 8 → +1 estrella; nivel 3, 6, 9 → +1 vida (máximo 5 vidas y 3 estrellas).</p>
+    <h3>Fin</h3>
+    <p>Victoria al superar el último nivel. Derrota al perder la última vida.</p>
+    <h3>Modo extremo</h3>
+    <p>Cuando ya dominen el juego: las cartas se juegan <b>boca abajo</b>. Al terminar el nivel se revisa la pila y cada error resta una vida.</p>
+    <div class="box"><b>Consejo.</b> El «reloj interno» compartido aparece solo: cartas bajas se juegan rápido, altas se esperan. Antes de cada nivel pongan las manos sobre la mesa unos segundos para sincronizarse. Y acepten que hablar de la partida <i>después</i> es la mitad de la gracia.</div>
+  </div>
+</article>
+<article class="game" id="20-texas-hold-em-con-puntos">
+  <div class="gh"><span class="num">20</span><h2>Texas Hold'em con puntos</h2><span class="alias">Póker sin fichas</span></div>
+  <div class="ficha"><span><b>Jugadores</b>2–8</span><span><b>Edad</b>12+</span><span><b>Duración</b>45–90 min</span><span><b>Cartas</b>52 + papel y lápiz</span><span><b>Tipo</b>Apuestas / faroleo</span></div>
+  <p class="intro">El póker más jugado del mundo no necesita fichas: un marcador de puntos por jugador en una hoja hace exactamente lo mismo. Sin dinero real, obviamente.</p>
+  <div class="cols">
+    <h3>Preparación</h3>
+    <p>Cada jugador empieza con <b>100 puntos</b> anotados en una hoja. Un jugador lleva la cuenta del «bote» de cada mano en la misma hoja. <b>Ciega pequeña 1, ciega grande 2</b> (suben a 2/4 y 3/6 cada 20 minutos si quieren partidas más cortas). Un botón (cualquier objeto) marca al repartidor y rota a la izquierda cada mano.</p>
+    <h3>Mano</h3>
+    <ol>
+      <li>Los dos jugadores a la izquierda del botón anotan las ciegas. Se reparten <b>2 cartas ocultas</b> a cada uno.</li>
+      <li><b>Preflop</b>: ronda de apuestas empezando a la izquierda de la ciega grande.</li>
+      <li><b>Flop</b>: 3 cartas comunes boca arriba. Ronda de apuestas desde la izquierda del botón.</li>
+      <li><b>Turn</b>: 4.ª carta común. Apuestas.</li>
+      <li><b>River</b>: 5.ª carta común. Apuestas y <b>muestra</b>: gana la mejor mano de 5 cartas usando cualquier combinación de las 2 propias y las 5 comunes.</li>
+    </ol>
+    <h3>Acciones en cada ronda</h3>
+    <p><b>Pasar</b> (si nadie apostó), <b>apostar</b>, <b>igualar</b>, <b>subir</b> (mínimo el doble de la apuesta anterior) o <b>retirarse</b>. Se juega sin límite: puedes apostar todos tus puntos («all-in»). La ronda acaba cuando todos igualaron o se retiraron.</p>
+    <h3>Ranking de manos (de mayor a menor)</h3>
+    <table class="mini">
+      <tr><td>1</td><td>Escalera real</td><td>A K Q J 10 del mismo palo</td></tr>
+      <tr><td>2</td><td>Escalera de color</td><td>5 seguidas del mismo palo</td></tr>
+      <tr><td>3</td><td>Póker</td><td>4 iguales</td></tr>
+      <tr><td>4</td><td>Full</td><td>3 iguales + 2 iguales</td></tr>
+      <tr><td>5</td><td>Color</td><td>5 del mismo palo</td></tr>
+      <tr><td>6</td><td>Escalera</td><td>5 seguidas (A puede ser 1 o alto)</td></tr>
+      <tr><td>7</td><td>Trío</td><td>3 iguales</td></tr>
+      <tr><td>8</td><td>Doble pareja</td><td>2 + 2 iguales</td></tr>
+      <tr><td>9</td><td>Pareja</td><td>2 iguales</td></tr>
+      <tr><td>10</td><td>Carta alta</td><td>nada de lo anterior</td></tr>
+    </table>
+    <h3>Fin</h3>
+    <p>Quien llega a 0 puntos queda fuera. Gana el último en pie, o quien tenga más puntos al acabar el tiempo acordado.</p>
+    <div class="box"><b>Estrategia básica.</b> Juega pocas manos desde posiciones tempranas (parejas altas, A-K, A-Q) y más desde el botón. Apostar el 50–70% del bote cuando tienes la mejor mano probable es mejor que pasar. No persigas escaleras con un solo hueco.</div>
+  </div>
+</article>
+<article class="game" id="bonus-solitarios">
+  <div class="gh"><span class="num">+</span><h2>Bonus: dos solitarios</h2><span class="alias">Para cuando nadie quiere jugar</span></div>
+  <div class="cols">
+    <h3>Klondike (el solitario de Windows)</h3>
+    <p><b>Preparación.</b> 7 columnas: la primera con 1 carta, la segunda con 2… la séptima con 7; solo la última carta de cada columna boca arriba. El resto es el mazo.</p>
+    <p><b>Objetivo.</b> Construir 4 pilas por palo, de A a K, arriba de la mesa.</p>
+    <p><b>Reglas.</b> En las columnas se construye en orden descendente alternando colores (un 6 rojo sobre un 7 negro). Se pueden mover secuencias completas. Al vaciar una columna solo se puede poner un K (o secuencia que empiece por K). Cuando la última carta de una columna queda boca abajo, se voltea. Del mazo se roban 3 cartas a la vez (versión difícil) o 1 (fácil), y se pueden dar tantas vueltas como se quiera.</p>
+    <p><b>Ganas</b> al completar las 4 pilas. Se gana aproximadamente 1 de cada 3 partidas robando de a 1, bastante menos de a 3.</p>
+    <h3>Pirámide</h3>
+    <p><b>Preparación.</b> Coloca 28 cartas boca arriba en forma de pirámide: 1 carta arriba, 2 debajo solapando, hasta una fila de 7. El resto es el mazo.</p>
+    <p><b>Objetivo.</b> Retirar toda la pirámide.</p>
+    <p><b>Reglas.</b> Se retiran <b>parejas de cartas que sumen 13</b>: A = 1, J = 11, Q = 12; el <b>K vale 13 y se retira solo</b>. Solo están disponibles las cartas sin nada encima (al principio, las 7 de la última fila). Del mazo se voltea una carta a la vez a un descarte; la superior del descarte también se puede emparejar. Una sola pasada por el mazo (versión difícil) o hasta tres.</p>
+    <p><b>Ganas</b> al vaciar la pirámide. Es más difícil de lo que parece: con una pasada se gana menos del 5% de las veces; con tres, alrededor del 20%.</p>
+    <div class="box"><b>Otros solitarios que valen la pena</b>: FreeCell (todas las cartas visibles, casi siempre resoluble), Spider con un mazo (en modo 1 palo), Reloj (puro azar, 1 minuto) y Golf solitario (7 columnas de 5, se descarta en secuencia ±1).</div>
+  </div>
+  <div class="nota" style="margin-top:20px">
+    <b>Fuentes y créditos.</b> Reglas clásicas basadas en las descripciones de referencia habituales (Pagat.com, Bicycle Cards). Regicide se distribuye con licencia que permite jugar con un mazo estándar; sus reglas oficiales están en regicidegame.com. Trio, Flip 7 y The Mind son adaptaciones caseras para naipes, no reglas oficiales: si un juego te gusta, compra la caja — el arte y los componentes pensados para el juego valen la pena, y así el autor sigue haciendo juegos. Catálogo generado en septiembre de 2026.
+  </div>
+</article>
+  <a class="top-link" href="#top">Volver arriba</a>
+</main>
+</div>
+<footer>
+  <p>Reglas clásicas basadas en las descripciones de referencia habituales (Pagat.com, Bicycle Cards). Regicide se distribuye con licencia que permite jugar con un mazo estándar; sus reglas oficiales están en regicidegame.com. Trio, Flip 7 y The Mind son adaptaciones caseras, no oficiales. Si un juego te gusta, compra la caja.</p>
+</footer>
+</div>
+</body>
+</html>
