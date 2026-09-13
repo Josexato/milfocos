@@ -209,8 +209,8 @@
       <a class="game-card" href="/catalogo.html#04-presidente"><div class="top"><span class="num">04</span><span class="cat">Familiar</span></div><h3>Presidente</h3><p>Jerarquía social: el que gana manda y recibe las mejores cartas.</p></a>
       <a class="game-card" href="/catalogo.html#05-golf"><div class="top"><span class="num">05</span><span class="cat">Familiar</span></div><h3>Golf</h3><p>El Skyjo con naipes: suma lo menos posible.</p></a>
       <a class="game-card" href="/catalogo.html#06-cabo"><div class="top"><span class="num">06</span><span class="cat">Memoria</span></div><h3>Cabo</h3><p>Memoria y poderes: espía, intercambia y canta «¡Cabo!».</p></a>
-      <a class="game-card" href="/catalogo.html#08-corazones"><div class="top"><span class="num">08</span><span class="cat">Bazas</span></div><h3>Corazones</h3><p>Evita los corazones y la Dama de picas… o llévatelos todos.</p></a>
-      <a class="game-card" href="/catalogo.html#09-espadas"><div class="top"><span class="num">09</span><span class="cat">Bazas</span></div><h3>Espadas</h3><p>Apuesta bazas en equipo; las picas siempre triunfan.</p></a>
+      <a class="game-card" href="/catalogo.html#08-corazones"><div class="top"><span class="num">08</span><span class="cat"><span data-term="trick" data-form="p">Rondas</span></span></div><h3>Corazones</h3><p>Evita los corazones y la Dama de picas… o llévatelos todos.</p></a>
+      <a class="game-card" href="/catalogo.html#09-espadas"><div class="top"><span class="num">09</span><span class="cat"><span data-term="trick" data-form="p">Rondas</span></span></div><h3>Espadas</h3><p><span data-i18n="spades.summary">Apuesta rondas en equipo; las picas siempre triunfan.</span></p></a>
       <a class="game-card" href="/catalogo.html#16-regicide"><div class="top"><span class="num">16</span><span class="cat">Cooperativo</span></div><h3>Regicide</h3><p>Derroten juntos a 12 monarcas; la joya moderna con naipes.</p></a>
       <a class="game-card" href="/catalogo.html#17-trio"><div class="top"><span class="num">17</span><span class="cat">Adaptación</span></div><h3>Trio</h3><p>Memoria y deducción: encuentra tres cartas iguales.</p></a>
       <a class="game-card" href="/catalogo.html#18-siete-a-la-vista"><div class="top"><span class="num">18</span><span class="cat">Adaptación</span></div><h3>Siete a la vista</h3><p>Presiona tu suerte: ¿otra carta o me planto?</p></a>
@@ -269,7 +269,7 @@
       </div>
       <div class="faq-item">
         <h3><button class="faq-q" aria-expanded="false" aria-controls="faq5" id="faq5-q">¿Hay juegos para niños?<span class="plus" aria-hidden="true">+</span></button></h3>
-        <div class="faq-a" id="faq5" role="region" aria-labelledby="faq5-q" hidden><p>Sí. Ocho Loco y Manotazo egipcio están pensados desde los 6 años; Golf y Trio desde los 7; Mentiroso, Palace, Presidente, Cabo, Durak, Siete a la vista y La Mente desde los 8. Los juegos de bazas y de combinaciones suelen ir mejor a partir de 10, y Texas Hold'em con puntos a partir de 12.</p></div>
+        <div class="faq-a" id="faq5" role="region" aria-labelledby="faq5-q" hidden><p>Sí. Ocho Loco y Manotazo egipcio están pensados desde los 6 años; Golf y Trio desde los 7; Mentiroso, Palace, Presidente, Cabo, Durak, Siete a la vista y La Mente desde los 8. <span data-i18n="faq.trickGames">Los juegos de rondas (bazas) y de combinaciones suelen ir mejor a partir de 10, y Texas Hold’em con puntos a partir de 12.</span></p></div>
       </div>
       <div class="faq-item">
         <h3><button class="faq-q" aria-expanded="false" aria-controls="faq6" id="faq6-q">¿Puedo imprimir el catálogo?<span class="plus" aria-hidden="true">+</span></button></h3>
@@ -308,6 +308,12 @@
       <ul>
         <li><a href="https://github.com/Josexato/milfocos/issues">Sugerencias y correcciones en GitHub</a></li>
       </ul>
+      <h4 class="mt">Vocabulario</h4>
+      <label class="locale"><span>Región</span>
+        <select data-locale-select aria-describedby="locale-help"><option value="es-419">Latinoamérica</option></select>
+      </label>
+      <p id="locale-help">Adapta palabras como «baza» o «robar» a la forma de hablar de tu país. Las reglas no cambian.</p>
+      <div id="locale-live" class="visually-hidden" aria-live="polite"></div>
     </div>
     <div class="legal">
       <span>© <span data-year>2026</span> MIL FOCOS. Los nombres de juegos mencionados pertenecen a sus editores; las adaptaciones son caseras y no oficiales.</span>
@@ -317,5 +323,6 @@
 </footer>
 
 <script src="/assets/js/site.js" defer></script>
+<script src="/assets/js/i18n.js" defer></script>
 </body>
 </html>
