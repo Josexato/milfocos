@@ -68,11 +68,11 @@
     'es-PE': {
       name: 'Perú',
       terms: {
-        trick: { gloss_s: 'ronda (tradicionalmente llamada baza)', gloss_p: 'rondas (tradicionalmente llamadas bazas)' },
-        draw: { stem: 'jal' }      // jalar una carta
+        trick: { gloss_s: 'ronda (tradicionalmente llamada baza)', gloss_p: 'rondas (tradicionalmente llamadas bazas)' }
+        // «robar» se mantiene igual que en es-419 (decisión editorial, sept. 2026)
       },
       phrases: {
-        'catalog.conventions': 'Convenciones: «{draw:ar}» (robar) es tomar carta del mazo; «{trick}», tradicionalmente llamada baza, es una jugada de una carta por jugador: gana la {trick} quien haya jugado la carta más alta {suit@del} de salida, salvo triunfo. Orden de valores por defecto: A (alto) K Q J 10 … 2, salvo que la ficha diga otra cosa. Los comodines solo se usan donde se menciona.',
+        'catalog.conventions': 'Convenciones: «{draw:ar}» es tomar carta del mazo; «{trick}», tradicionalmente llamada baza, es una jugada de una carta por jugador: gana la {trick} quien haya jugado la carta más alta {suit@del} de salida, salvo triunfo. Orden de valores por defecto: A (alto) K Q J 10 … 2, salvo que la ficha diga otra cosa. Los comodines solo se usan donde se menciona.',
         'category.trick': 'Juegos de ganar {trick_p}',
         'filter.trick': 'Ganar rondas',
         'faq.trickGames': 'Los juegos de ganar {trick_p} y los de combinaciones suelen ir mejor a partir de 10, y Texas Hold’em con puntos a partir de 12.',

@@ -10,7 +10,7 @@ MIL FOCOS es la marca; MIL IDEAS es el producto: **un mazo, veinte juegos**. Sit
 - `MIL_IDEAS_catalogo.pdf` — catálogo en PDF (24 páginas A4). `Un_mazo_20_juegos.pdf` es una copia con el nombre antiguo para no romper enlaces ya compartidos.
 - `assets/css/site.css` — tokens (colores, tipografía, radios, espaciado) y componentes compartidos.
 - `assets/js/site.js` — menú móvil, FAQ accesible, año del footer y filtros de `/juegos/`.
-- `assets/js/i18n.js` — localización regional del vocabulario (ronda/baza, robar/jalar, palo/pinta…) con selector de región en el footer. Documentado en `LOCALIZACION.md`.
+- `assets/js/i18n.js` — localización regional del vocabulario (ronda/baza, palo/pinta, descarte/pozo…) con selector de región en el footer. Documentado en `LOCALIZACION.md`.
 - `assets/img/` — producto (WebP con transparencia, 2 tamaños), portada del PDF, foto de mesa y `og.jpg` para Open Graph.
 - `fonts/` — Bricolage Grotesque (licencia OFL) servida localmente.
 - `CNAME` — dominio personalizado (no borrar). `.nojekyll`, `robots.txt`, `sitemap.xml`.

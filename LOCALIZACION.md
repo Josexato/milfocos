@@ -21,7 +21,7 @@ No se usa la zona horaria ni la IP.
 | Código | Nombre | Hereda de | Diferencias activas |
 |---|---|---|---|
 | `es-419` | Latinoamérica | — | base neutra |
-| `es-PE` | Perú | es-419 | ronda con glosa larga, `robar → jalar`, «Juegos de ganar rondas» |
+| `es-PE` | Perú | es-419 | ronda con glosa larga, «Juegos de ganar rondas» |
 | `es-MX` | México | es-419 | ninguna confirmada (hereda todo) |
 | `es-CO` | Colombia | es-419 | ninguna confirmada (hereda todo) |
 | `es-CL` | Chile | es-419 | `palo → pinta` (femenino, con concordancia de artículos) |
@@ -35,14 +35,14 @@ Se revisó la lista completa del brief (baza, mano, ronda, mazo/baraja, descarte
 | Clave | es-419 (base) | es-PE | es-CL | es-AR | es-ES | Ocurrencias |
 |---|---|---|---|---|---|---|
 | `trick` (baza) | ronda · primera mención «ronda (baza)» · tooltip | ronda · «ronda (tradicionalmente llamada baza)» | = | = | baza | ~30 en reglas, 4 tipos, 1 filtro, 3 resúmenes |
-| `draw` (robar) | robar | jalar | = | = | = | 22 (todas las formas del verbo) |
+| `draw` (robar) | robar | = | = | = | = | 22 (todas las formas del verbo; sin variantes activas hoy) |
 | `suit` (palo) | palo | = | pinta | = | = | 48 |
 | `flip` (voltear) | voltear | = | = | dar vuelta | = | 25 |
 | `discardPile` | pila de descarte / descarte | = | = | pozo | = | 15 |
 
 Sin cambios, por ser comprensibles en toda la región o por no existir una alternativa claramente más natural: **mazo** (además es parte de la promesa de marca), **comodín**, **figura**, **triunfo**, **repartir**, **plantarse**, **boca arriba/abajo**, **pareja**, **ficha**, **puntuación**.
 
-Decisiones editoriales que conviene validar con hablantes: `es-PE` «jalar» (también se dice «robar» y «coger»); `es-AR` «dar vuelta»; `es-CL` «pinta» (también se usa «palo»). Cada una se cambia en **una línea** del diccionario.
+Decisiones editoriales que conviene validar con hablantes: `es-AR` «dar vuelta»; `es-CL` «pinta» (también se usa «palo»). Para Perú se evaluó «jalar» y se optó por mantener «robar». Cada una se cambia en **una línea** del diccionario.
 
 ## Marcado en el HTML
 
@@ -59,7 +59,7 @@ Decisiones editoriales que conviene validar con hablantes: `es-PE` «jalar» (ta
 
 - El texto dentro del span es el neutro (`es-419`). El script lo guarda en `data-orig` la primera vez y siempre parte de ahí, así se puede volver a la región base.
 - Sustantivos: el diccionario da `s`, `p`, opcionalmente `short`, `gloss_s`, `gloss_p`, `title` (tooltip) y `gender` (`'f'` activa la concordancia de artículos: el → la, del → de la, al → a la, un → una, mismo → misma, otro → otra…).
-- Verbos regulares en -ar: `stem` sustituye la raíz y conserva la terminación (`rob|an` → `jal|an`). Si la forma no es un verbo simple (`dar vuelta`), se enumeran las `forms` por terminación.
+- Verbos regulares en -ar: `stem` sustituye la raíz y conserva la terminación (por ejemplo `rob|an` → `jal|an` si un país definiera `stem: 'jal'`). Si la forma no es un verbo simple (`dar vuelta`), se enumeran las `forms` por terminación.
 - Se respetan mayúsculas iniciales.
 
 ### Frase completa: `data-i18n`
