@@ -41,13 +41,14 @@
 .hero .visual{position:relative;isolation:isolate}
 .hero .visual:before{content:"";position:absolute;inset:8% -2% 2% 4%;background:var(--mustard);border-radius:42% 58% 55% 45% / 45% 40% 60% 55%;z-index:-1}
 .hero .visual img{width:100%;max-width:34rem;margin:0 auto}
+.hero .status-note{margin:1rem auto 0;text-align:center;font-size:.85rem;color:var(--ink-2);max-width:30ch}
 @media (prefers-reduced-motion:no-preference){
   .hero .visual img{transition:transform .5s var(--ease)}
   .hero .visual:hover img{transform:translateY(-6px) rotate(-1deg)}
 }
 @media (max-width:860px){
   .hero .wrap{grid-template-columns:1fr}
-  .hero .visual{order:-1;max-width:22rem;margin:0 auto}
+  .hero .visual{max-width:18rem;margin:1.5rem auto 0}
   .hero .cta .btn{flex:1 1 100%}
 }
 
@@ -144,7 +145,10 @@
       </div>
     </div>
     <div class="visual rise d1">
-      <img src="/assets/img/producto-960.webp" srcset="/assets/img/producto-560.webp 560w, /assets/img/producto-960.webp 960w" sizes="(max-width:860px) 22rem, 34rem" width="1241" height="1135" alt="Caja de MIL IDEAS, amarilla con una bombilla, junto a un abanico de cartas: as de picas, corazones, diamantes, tréboles y un comodín" fetchpriority="high">
+      <img src="/assets/img/producto-960.webp" srcset="/assets/img/producto-560.webp 560w, /assets/img/producto-960.webp 960w" sizes="(max-width:860px) 22rem, 34rem" width="1241" height="1135" alt="Diseño conceptual de la caja de MIL IDEAS, amarilla con una bombilla, junto a un abanico de cartas: as de picas, corazones, diamantes, tréboles y un comodín" fetchpriority="high">
+      <p class="status-note">Edición física en desarrollo. Hoy, MIL IDEAS es un catálogo gratuito en PDF.</p>
+      <!-- Bloque futuro (activar cuando exista lista de espera):
+      <p class="cta"><a class="btn ghost" href="#">Quiero una cuando esté disponible</a></p> -->
     </div>
   </div>
 </section>
@@ -222,7 +226,7 @@
       <p class="eyebrow">Por qué existe</p>
       <h2 id="h-why">Más juego con menos componentes.</h2>
       <p class="lead">No siempre hacen falta más componentes para tener más juego. MIL IDEAS nació de la curiosidad por descubrir cuánto puede hacerse con una baraja común: aprender mecánicas, adaptar ideas, inventar variantes y reunir a la gente alrededor de una mesa.</p>
-      <p class="lead">Muchos juegos de cartas modernos son, en el fondo, un mazo con arte bonito. Puedes probarlos con naipes y, si te enganchan, comprar la caja original por gusto y para apoyar a su autor.</p>
+      <p class="lead">Muchas mecánicas de juegos modernos pueden explorarse con una baraja estándar. Probarlas así es una forma de descubrir qué tipos de juego te gustan; y cuando uno te engancha, la edición original aporta el diseño, el arte y la experiencia creada por sus autores.</p>
       <blockquote>Más juegos. Más gente. Mejores historias.</blockquote>
     </div>
   </div>
