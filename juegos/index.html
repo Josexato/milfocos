@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Los 20 juegos de MIL IDEAS | Filtra por tipo, jugadores y duración | MIL FOCOS</title>
+<meta name="description" content="Los 20 juegos del catálogo MIL IDEAS con jugadores, duración, complejidad y cartas necesarias: familiares, de bazas, de combinaciones, modernos, cooperativos y solitarios. Filtra y busca.">
+<link rel="canonical" href="https://milfocos.com/juegos/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MIL FOCOS">
+<meta property="og:title" content="Los 20 juegos de MIL IDEAS">
+<meta property="og:description" content="Familiares, de bazas, de combinaciones, modernos, cooperativos y solitarios. Todos con una baraja estándar de 52 cartas + 2 comodines.">
+<meta property="og:url" content="https://milfocos.com/juegos/">
+<meta property="og:image" content="https://milfocos.com/assets/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0D2A4A">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230D2A4A'/%3E%3Ccircle cx='32' cy='27' r='15' fill='%23F5C518'/%3E%3Crect x='24' y='42' width='16' height='10' rx='3' fill='%23fff'/%3E%3C/svg%3E">
+<link rel="preload" href="/fonts/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/fonts/bricolage.css">
+<link rel="stylesheet" href="/assets/css/site.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ItemList","name":"Los 20 juegos de MIL IDEAS","itemListElement":[{"@type":"ListItem","position":1,"name":"Ocho Loco","url":"https://milfocos.com/catalogo.html#01-ocho-loco"},{"@type":"ListItem","position":2,"name":"Mentiroso","url":"https://milfocos.com/catalogo.html#02-mentiroso"},{"@type":"ListItem","position":3,"name":"Palace","url":"https://milfocos.com/catalogo.html#03-palace"},{"@type":"ListItem","position":4,"name":"Presidente","url":"https://milfocos.com/catalogo.html#04-presidente"},{"@type":"ListItem","position":5,"name":"Golf","url":"https://milfocos.com/catalogo.html#05-golf"},{"@type":"ListItem","position":6,"name":"Cabo","url":"https://milfocos.com/catalogo.html#06-cabo"},{"@type":"ListItem","position":7,"name":"Manotazo egipcio","url":"https://milfocos.com/catalogo.html#07-manotazo-egipcio"},{"@type":"ListItem","position":8,"name":"Corazones","url":"https://milfocos.com/catalogo.html#08-corazones"},{"@type":"ListItem","position":9,"name":"Espadas","url":"https://milfocos.com/catalogo.html#09-espadas"},{"@type":"ListItem","position":10,"name":"Apuesta exacta","url":"https://milfocos.com/catalogo.html#10-apuesta-exacta"},{"@type":"ListItem","position":11,"name":"Euchre","url":"https://milfocos.com/catalogo.html#11-euchre"},{"@type":"ListItem","position":12,"name":"Durak","url":"https://milfocos.com/catalogo.html#12-durak"},{"@type":"ListItem","position":13,"name":"Gin Rummy","url":"https://milfocos.com/catalogo.html#13-gin-rummy"},{"@type":"ListItem","position":14,"name":"Casino","url":"https://milfocos.com/catalogo.html#14-casino"},{"@type":"ListItem","position":15,"name":"Cribbage","url":"https://milfocos.com/catalogo.html#15-cribbage"},{"@type":"ListItem","position":16,"name":"Regicide","url":"https://milfocos.com/catalogo.html#16-regicide"},{"@type":"ListItem","position":17,"name":"Trio","url":"https://milfocos.com/catalogo.html#17-trio"},{"@type":"ListItem","position":18,"name":"Siete a la vista","url":"https://milfocos.com/catalogo.html#18-siete-a-la-vista"},{"@type":"ListItem","position":19,"name":"La Mente","url":"https://milfocos.com/catalogo.html#19-la-mente"},{"@type":"ListItem","position":20,"name":"Texas Hold'em con puntos","url":"https://milfocos.com/catalogo.html#20-texas-hold-em-con-puntos"}]}
+</script>
+<style>
+.page-head{padding-block:clamp(2rem,5vw,3.5rem) 1.5rem}
+.page-head h1{font-size:clamp(2.2rem,5.5vw,3.6rem);letter-spacing:-.03em}
+.tools{display:flex;flex-direction:column;gap:.9rem;margin-bottom:1.6rem}
+.search{position:relative;max-width:26rem}
+.search input{width:100%;min-height:3rem;padding:.6rem 1rem .6rem 2.7rem;border:2px solid var(--line);border-radius:var(--r);font:inherit;background:#fff;color:var(--navy)}
+.search input:focus{border-color:var(--navy);outline:none}
+.search svg{position:absolute;left:.9rem;top:50%;transform:translateY(-50%);width:1.2rem;height:1.2rem;pointer-events:none;color:var(--ink-2)}
+.status{font-size:.9rem;color:var(--ink-2)}
+.games{grid-template-columns:repeat(3,1fr)}
+@media (max-width:1000px){.games{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:620px){.games{grid-template-columns:1fr}}
+.game-card .alias{font-size:.85rem;color:var(--ink-2);margin-top:-.3rem}
+.game-card .cards{font-size:.82rem;color:var(--ink-2);border-top:1px dashed var(--line);padding-top:.5rem;margin-top:.2rem}
+.game-card h3 .tag{margin-left:.35rem;position:relative;top:-.15em}
+#empty{padding:2rem;border:1px dashed var(--line);border-radius:var(--r-lg);text-align:center;color:var(--ink-2)}
+.legend{font-size:.85rem;color:var(--ink-2);margin-top:1.5rem}
+</style>
+</head>
+<body>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="MIL FOCOS, inicio">
+      <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"/><path d="M10 21h4"/><path d="M12 3a6 6 0 0 0-4 10.5c.7.6 1 1.3 1 2.5h6c0-1.2.3-1.9 1-2.5A6 6 0 0 0 12 3z" fill="#F5C518"/></svg>
+      Mil Focos
+    </a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="site-nav" aria-label="Abrir menú">
+      <svg class="open" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      <svg class="close" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+    <nav class="nav" id="site-nav" aria-label="Principal">
+      <a href="/">Inicio</a>
+      <a href="/juegos/" aria-current="page">Juegos</a>
+      <a href="/#catalogo">Catálogo</a>
+      <a href="/#como">Cómo funciona</a>
+      <a href="/#faq">Preguntas</a>
+      <a class="btn primary" href="/MIL_IDEAS_catalogo.pdf">Descargar catálogo</a>
+    </nav>
+  </div>
+</header>
+
+
+<main id="contenido">
+  <div class="wrap">
+    <header class="page-head">
+      <p class="eyebrow">MIL IDEAS · catálogo completo</p>
+      <h1>Los veinte juegos</h1>
+      <p class="lead">Filtra por tipo o busca por nombre. Cada tarjeta lleva a la regla completa: preparación, cómo se juega, fin de partida, variantes y un consejo. Todo con una baraja estándar de 52 cartas + 2 comodines.</p>
+    </header>
+
+    <div class="tools">
+      <div class="chips" role="group" aria-label="Filtrar por tipo">
+      <button class="chip" type="button" data-filter="todos" aria-pressed="true">Todos</button>
+      <button class="chip" type="button" data-filter="clasicos" aria-pressed="false">Clásicos</button>
+      <button class="chip" type="button" data-filter="familiar" aria-pressed="false">Familiar / rápido</button>
+      <button class="chip" type="button" data-filter="bazas" aria-pressed="false">Bazas</button>
+      <button class="chip" type="button" data-filter="combinaciones" aria-pressed="false">Combinaciones / captura</button>
+      <button class="chip" type="button" data-filter="modernos" aria-pressed="false">Modernos / adaptaciones</button>
+      <button class="chip" type="button" data-filter="cooperativos" aria-pressed="false">Cooperativos</button>
+      <button class="chip" type="button" data-filter="solitarios" aria-pressed="false">Solitarios</button>
+      </div>
+      <div class="search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <label class="visually-hidden" for="search">Buscar juego por nombre</label>
+        <input id="search" type="search" placeholder="Buscar por nombre…" autocomplete="off">
+      </div>
+      <p class="status" aria-live="polite"><span id="count">21 juegos</span> · haz clic en un juego para leer sus reglas.</p>
+    </div>
+
+    <div class="grid games" id="games">
+      <a class="game-card" href="/catalogo.html#01-ocho-loco" data-tags="familiar clasicos" data-name="Ocho Loco Crazy Eights · «UNO con naipes»">
+        <div class="top"><span class="num">01</span><span class="cat">Descarte / familiar</span></div>
+        <h3>Ocho Loco</h3>
+        <p class="alias">Crazy Eights · «UNO con naipes»</p>
+        <p>El UNO original, con naipes.</p>
+        <div class="meta">
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><circle cx="17" cy="9" r="2.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0M15 20a5 5 0 0 1 6.5-4.8"/></svg>2–7</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>15–30 min</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 4v5c0 4.5-3 8-7 9-4-1-7-4.5-7-9V7z"/></svg>6+</span>
+          <span class="lv" title="Complejidad 1 de 4" aria-label="Complejidad 1 de 4">●<em>●●●</em></span>
+        </div>
+        <p class="cards">Cartas: 52 (+2 comodines opcional)</p>
+      </a>
+      <a class="game-card" href="/catalogo.html#02-mentiroso" data-tags="familiar clasicos" data-name="Mentiroso Cheat · Bullshit · Dudo">
+        <div class="top"><span class="num">02</span><span class="cat">Faroleo / fiesta</span></div>
+        <h3>Mentiroso</h3>
+        <p class="alias">Cheat · Bullshit · Dudo</p>
+        <p>Deshazte de tus cartas mintiendo sin que te pillen.</p>
+        <div class="meta">
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><circle cx="17" cy="9" r="2.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0M15 20a5 5 0 0 1 6.5-4.8"/></svg>3–8</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>15–25 min</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 4v5c0 4.5-3 8-7 9-4-1-7-4.5-7-9V7z"/></svg>8+</span>
+          <span class="lv" title="Complejidad 1 de 4" aria-label="Complejidad 1 de 4">●<em>●●●</em></span>
+        </div>
+        <p class="cards">Cartas: 52 (+2 comodines opcional)</p>
+      </a>
+      <a class="game-card" href="/catalogo.html#03-palace" data-tags="familiar clasicos" data-name="Palace Shithead · Karma · Palacio">
+        <div class="top"><span class="num">03</span><span class="cat">Descarte / táctico</span></div>
+        <h3>Palace</h3>
+        <p class="alias">Shithead · Karma · Palacio</p>
+        <p>Cartas ocultas, cartas a ciegas y el que se queda con cartas pierde.</p>
+        <div class="meta">
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><circle cx="17" cy="9" r="2.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0M15 20a5 5 0 0 1 6.5-4.8"/></svg>2–5</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>20–30 min</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 4v5c0 4.5-3 8-7 9-4-1-7-4.5-7-9V7z"/></svg>8+</span>
+          <span class="lv" title="Complejidad 2 de 4" aria-label="Complejidad 2 de 4">●●<em>●●</em></span>
+        </div>
+        <p class="cards">Cartas: 52</p>
+      </a>
+      <a class="game-card" href="/catalogo.html#04-presidente" data-tags="familiar clasicos" data-name="Presidente Culo · Scum · Daifugō">
+        <div class="top"><span class="num">04</span><span class="cat">Escalada / social</span></div>
+        <h3>Presidente</h3>
+        <p class="alias">Culo · Scum · Daifugō</p>
+        <p>Jerarquía social: el que gana manda y recibe las mejores cartas.</p>
+        <div class="meta">
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><circle cx="17" cy="9" r="2.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0M15 20a5 5 0 0 1 6.5-4.8"/></svg>4–7</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>30–45 min</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 4v5c0 4.5-3 8-7 9-4-1-7-4.5-7-9V7z"/></svg>8+</span>
+          <span class="lv" title="Complejidad 2 de 4" aria-label="Complejidad 2 de 4">●●<em>●●</em></span>
+        </div>
+        <p class="cards">Cartas: 52 + 2 comodines</p>
+      </a>
+      <a class="game-card" href="/catalogo.html#05-golf" data-tags="familiar clasicos" data-name="Golf Golf de 6 cartas · «Skyjo con naipes»">
+        <div class="top"><span class="num">05</span><span class="cat">Cambio de cartas / familiar</span></div>
+        <h3>Golf</h3>
+        <p class="alias">Golf de 6 cartas · «Skyjo con naipes»</p>
+        <p>El Skyjo con naipes: suma lo menos posible.</p>
+        <div class="meta">
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><circle cx="17" cy="9" r="2.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0M15 20a5 5 0 0 1 6.5-4.8"/></svg>2–6</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>30–45 min</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 4v5c0 4.5-3 8-7 9-4-1-7-4.5-7-9V7z"/></svg>7+</span>
+          <span class="lv" title="Complejidad 1 de 4" aria-label="Complejidad 1 de 4">●<em>●●●</em></span>
+        </div>
+        <p class="cards">Cartas: 52 + 2 comodines</p>
+      </a>
+      <a class="game-card" href="/catalogo.html#06-cabo" data-tags="familiar modernos" data-name="Cabo Cambio · Cabo (2010) con naipes">
+        <div class="top"><span class="num">06</span><span class="cat">Memoria / cambio de cartas</span></div>
+        <h3>Cabo</h3>
+        <p class="alias">Cambio · Cabo (2010) con naipes</p>
+        <p>Memoria y poderes: espía, intercambia y canta «¡Cabo!».</p>
+        <div class="meta">
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><circle cx="17" cy="9" r="2.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0M15 20a5 5 0 0 1 6.5-4.8"/></svg>2–5</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>30–45 min</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 4v5c0 4.5-3 8-7 9-4-1-7-4.5-7-9V7z"/></svg>8+</span>
+          <span class="lv" title="Complejidad 2 de 4" aria-label="Complejidad 2 de 4">●●<em>●●</em></span>
+        </div>
+        <p class="cards">Cartas: 52 + 2 comodines</p>
+      </a>
+      <a class="game-card" href="/catalogo.html#07-manotazo-egipcio" data-tags="familiar clasicos" data-name="Manotazo egipcio Egyptian Ratscrew · Slap">
+        <div class="top"><span class="num">07</span><span class="cat">Reflejos / fiesta</span></div>
+        <h3>Manotazo egipcio</h3>
+        <p class="alias">Egyptian Ratscrew · Slap</p>
+        <p>Reflejos puros: pega la pila cuando salgan dobles.</p>
+        <div class="meta">
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><circle cx="17" cy="9" r="2.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0M15 20a5 5 0 0 1 6.5-4.8"/></svg>2–6</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>10–20 min</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 4v5c0 4.5-3 8-7 9-4-1-7-4.5-7-9V7z"/></svg>6+</span>
+          <span class="lv" title="Complejidad 1 de 4" aria-label="Complejidad 1 de 4">●<em>●●●</em></span>
+        </div>
+        <p class="cards">Cartas: 52</p>
+      </a>
+      <a class="game-card" href="/catalogo.html#08-corazones" data-tags="bazas clasicos" data-name="Corazones Hearts">
+        <div class="top"><span class="num">08</span><span class="cat">Bazas / evasión</span></div>
+        <h3>Corazones</h3>
+        <p class="alias">Hearts</p>
+        <p>Evita los corazones y la Dama de picas… o llévatelos todos.</p>
+        <div class="meta">
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><circle cx="17" cy="9" r="2.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0M15 20a5 5 0 0 1 6.5-4.8"/></svg>3–5 (ideal 4)</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>45–60 min</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 4v5c0 4.5-3 8-7 9-4-1-7-4.5-7-9V7z"/></svg>10+</span>
+          <span class="lv" title="Complejidad 2 de 4" aria-label="Complejidad 2 de 4">●●<em>●●</em></span>
+        </div>
+        <p class="cards">Cartas: 52</p>
+      </a>
+      <a class="game-card" href="/catalogo.html#09-espadas" data-tags="bazas clasicos" data-name="Espadas Spades">
+        <div class="top"><span class="num">09</span><span class="cat">Bazas / apuesta en equipo</span></div>
+        <h3>Espadas</h3>
+        <p class="alias">Spades</p>
+        <p>Apuesta bazas en equipo; las picas siempre triunfan.</p>
+        <div class="meta">
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><circle cx="17" cy="9" r="2.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0M15 20a5 5 0 0 1 6.5-4.8"/></svg>4 en parejas</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>45–60 min</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 4v5c0 4.5-3 8-7 9-4-1-7-4.5-7-9V7z"/></svg>10+</span>
+          <span class="lv" title="Complejidad 3 de 4" aria-label="Complejidad 3 de 4">●●●<em>●</em></span>
+        </div>
+        <p class="cards">Cartas: 52</p>
+      </a>
+      <a class="game-card" href="/catalogo.html#10-apuesta-exacta" data-tags="bazas clasicos" data-name="Apuesta exacta Oh Hell · Nomination Whist">
+        <div class="top"><span class="num">10</span><span class="cat">Bazas / apuesta exacta</span></div>
+        <h3>Apuesta exacta</h3>
+        <p class="alias">Oh Hell · Nomination Whist</p>
+        <p>El Skull King / Wizard casero: acierta exactamente tus bazas.</p>
+        <div class="meta">
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><circle cx="17" cy="9" r="2.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0M15 20a5 5 0 0 1 6.5-4.8"/></svg>3–7</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>30–45 min</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 4v5c0 4.5-3 8-7 9-4-1-7-4.5-7-9V7z"/></svg>10+</span>
+          <span class="lv" title="Complejidad 2 de 4" aria-label="Complejidad 2 de 4">●●<em>●●</em></span>
+        </div>
+        <p class="cards">Cartas: 52 + 2 comodines</p>
+      </a>
+      <a class="game-card" href="/catalogo.html#11-euchre" data-tags="bazas clasicos" data-name="Euchre El juego de bazas de Norteamérica">
+        <div class="top"><span class="num">11</span><span class="cat">Bazas / parejas</span></div>
+        <h3>Euchre</h3>
+        <p class="alias">El juego de bazas de Norteamérica</p>
+        <p>Bazas rápidas con 24 cartas y jotas que cambian de palo.</p>
+        <div class="meta">
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><circle cx="17" cy="9" r="2.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0M15 20a5 5 0 0 1 6.5-4.8"/></svg>4 en parejas</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>30–40 min</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 4v5c0 4.5-3 8-7 9-4-1-7-4.5-7-9V7z"/></svg>10+</span>
+          <span class="lv" title="Complejidad 3 de 4" aria-label="Complejidad 3 de 4">●●●<em>●</em></span>
+        </div>
+        <p class="cards">Cartas: 24 (9 a A de cada palo)</p>
+      </a>
+      <a class="game-card" href="/catalogo.html#12-durak" data-tags="bazas clasicos" data-name="Durak Дурак · «el tonto»">
+        <div class="top"><span class="num">12</span><span class="cat">Ataque y defensa</span></div>
+        <h3>Durak</h3>
+        <p class="alias">Дурак · «el tonto»</p>
+        <p>Ataca y defiende; el último con cartas es el «tonto».</p>
+        <div class="meta">
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><circle cx="17" cy="9" r="2.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0M15 20a5 5 0 0 1 6.5-4.8"/></svg>2–6</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>20–30 min</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 4v5c0 4.5-3 8-7 9-4-1-7-4.5-7-9V7z"/></svg>8+</span>
+          <span class="lv" title="Complejidad 2 de 4" aria-label="Complejidad 2 de 4">●●<em>●●</em></span>
+        </div>
+        <p class="cards">Cartas: 36 (6 a A de cada palo)</p>
+      </a>
+      <a class="game-card" href="/catalogo.html#13-gin-rummy" data-tags="combinaciones clasicos" data-name="Gin Rummy Gin">
+        <div class="top"><span class="num">13</span><span class="cat">Rummy / combinaciones</span></div>
+        <h3>Gin Rummy</h3>
+        <p class="alias">Gin</p>
+        <p>El mejor rummy para dos: forma grupos y «toca» a tiempo.</p>
+        <div class="meta">
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><circle cx="17" cy="9" r="2.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0M15 20a5 5 0 0 1 6.5-4.8"/></svg>2</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>30–60 min</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 4v5c0 4.5-3 8-7 9-4-1-7-4.5-7-9V7z"/></svg>10+</span>
+          <span class="lv" title="Complejidad 2 de 4" aria-label="Complejidad 2 de 4">●●<em>●●</em></span>
+        </div>
+        <p class="cards">Cartas: 52</p>
+      </a>
+      <a class="game-card" href="/catalogo.html#14-casino" data-tags="combinaciones clasicos" data-name="Casino Cassino · Casita">
+        <div class="top"><span class="num">14</span><span class="cat">Captura / aritmética</span></div>
+        <h3>Casino</h3>
+        <p class="alias">Cassino · Casita</p>
+        <p>Captura cartas de la mesa sumando y construyendo.</p>
+        <div class="meta">
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><circle cx="17" cy="9" r="2.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0M15 20a5 5 0 0 1 6.5-4.8"/></svg>2–4</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>30–45 min</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 4v5c0 4.5-3 8-7 9-4-1-7-4.5-7-9V7z"/></svg>9+</span>
+          <span class="lv" title="Complejidad 3 de 4" aria-label="Complejidad 3 de 4">●●●<em>●</em></span>
+        </div>
+        <p class="cards">Cartas: 52</p>
+      </a>
+      <a class="game-card" href="/catalogo.html#15-cribbage" data-tags="combinaciones clasicos" data-name="Cribbage Crib · sin tablero, con papel">
+        <div class="top"><span class="num">15</span><span class="cat">Combinaciones / conteo</span></div>
+        <h3>Cribbage</h3>
+        <p class="alias">Crib · sin tablero, con papel</p>
+        <p>Clásico de puntuación combinatoria; no hace falta tablero.</p>
+        <div class="meta">
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><circle cx="17" cy="9" r="2.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0M15 20a5 5 0 0 1 6.5-4.8"/></svg>2 (3–4 con variantes)</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>30–40 min</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 4v5c0 4.5-3 8-7 9-4-1-7-4.5-7-9V7z"/></svg>10+</span>
+          <span class="lv" title="Complejidad 4 de 4" aria-label="Complejidad 4 de 4">●●●●<em></em></span>
+        </div>
+        <p class="cards">Cartas: 52 + papel y lápiz</p>
+      </a>
+      <a class="game-card" href="/catalogo.html#16-regicide" data-tags="modernos cooperativos" data-name="Regicide Badgers from Mars, 2020 · reglas para naipes estándar">
+        <div class="top"><span class="num">16</span><span class="cat">Cooperativo / gestión de mano</span></div>
+        <h3>Regicide <span class="tag coop">Cooperativo</span></h3>
+        <p class="alias">Badgers from Mars, 2020 · reglas para naipes estándar</p>
+        <p>Derroten juntos a 12 monarcas; la joya moderna con naipes.</p>
+        <div class="meta">
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><circle cx="17" cy="9" r="2.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0M15 20a5 5 0 0 1 6.5-4.8"/></svg>1–4</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>20–40 min</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 4v5c0 4.5-3 8-7 9-4-1-7-4.5-7-9V7z"/></svg>10+</span>
+          <span class="lv" title="Complejidad 3 de 4" aria-label="Complejidad 3 de 4">●●●<em>●</em></span>
+        </div>
+        <p class="cards">Cartas: 52 + comodines (bufones)</p>
+      </a>
+      <a class="game-card" href="/catalogo.html#17-trio" data-tags="modernos familiar" data-name="Trio Adaptación de Trio / Nana (Kaï Sakurai, 2021)">
+        <div class="top"><span class="num">17</span><span class="cat">Memoria / deducción</span></div>
+        <h3>Trio <span class="tag adapt">Adaptación</span></h3>
+        <p class="alias">Adaptación de Trio / Nana (Kaï Sakurai, 2021)</p>
+        <p>Memoria y deducción: encuentra tres cartas iguales.</p>
+        <div class="meta">
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><circle cx="17" cy="9" r="2.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0M15 20a5 5 0 0 1 6.5-4.8"/></svg>3–6</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>15–20 min</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 4v5c0 4.5-3 8-7 9-4-1-7-4.5-7-9V7z"/></svg>7+</span>
+          <span class="lv" title="Complejidad 1 de 4" aria-label="Complejidad 1 de 4">●<em>●●●</em></span>
+        </div>
+        <p class="cards">Cartas: 36 (A a Q de tres palos)</p>
+      </a>
+      <a class="game-card" href="/catalogo.html#18-siete-a-la-vista" data-tags="modernos familiar" data-name="Siete a la vista Adaptación de Flip 7 (Eric Olsen, 2024)">
+        <div class="top"><span class="num">18</span><span class="cat">Presiona tu suerte</span></div>
+        <h3>Siete a la vista <span class="tag adapt">Adaptación</span></h3>
+        <p class="alias">Adaptación de Flip 7 (Eric Olsen, 2024)</p>
+        <p>Presiona tu suerte: ¿otra carta o me planto?</p>
+        <div class="meta">
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><circle cx="17" cy="9" r="2.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0M15 20a5 5 0 0 1 6.5-4.8"/></svg>3–8</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>15–25 min</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 4v5c0 4.5-3 8-7 9-4-1-7-4.5-7-9V7z"/></svg>8+</span>
+          <span class="lv" title="Complejidad 1 de 4" aria-label="Complejidad 1 de 4">●<em>●●●</em></span>
+        </div>
+        <p class="cards">Cartas: 52 + 2 comodines</p>
+      </a>
+      <a class="game-card" href="/catalogo.html#19-la-mente" data-tags="modernos cooperativos" data-name="La Mente Adaptación de The Mind (Wolfgang Warsch, 2018)">
+        <div class="top"><span class="num">19</span><span class="cat">Cooperativo / sincronía</span></div>
+        <h3>La Mente <span class="tag coop">Cooperativo</span> <span class="tag adapt">Adaptación</span></h3>
+        <p class="alias">Adaptación de The Mind (Wolfgang Warsch, 2018)</p>
+        <p>Jueguen en orden ascendente sin hablar. Sí, en serio.</p>
+        <div class="meta">
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><circle cx="17" cy="9" r="2.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0M15 20a5 5 0 0 1 6.5-4.8"/></svg>2–4</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>15–25 min</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 4v5c0 4.5-3 8-7 9-4-1-7-4.5-7-9V7z"/></svg>8+</span>
+          <span class="lv" title="Complejidad 1 de 4" aria-label="Complejidad 1 de 4">●<em>●●●</em></span>
+        </div>
+        <p class="cards">Cartas: 52 (sin comodines)</p>
+      </a>
+      <a class="game-card" href="/catalogo.html#20-texas-hold-em-con-puntos" data-tags="clasicos" data-name="Texas Hold'em con puntos Póker sin fichas">
+        <div class="top"><span class="num">20</span><span class="cat">Apuestas / faroleo</span></div>
+        <h3>Texas Hold'em con puntos</h3>
+        <p class="alias">Póker sin fichas</p>
+        <p>Póker sin fichas: se anota en papel.</p>
+        <div class="meta">
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><circle cx="17" cy="9" r="2.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0M15 20a5 5 0 0 1 6.5-4.8"/></svg>2–8</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>45–90 min</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 4v5c0 4.5-3 8-7 9-4-1-7-4.5-7-9V7z"/></svg>12+</span>
+          <span class="lv" title="Complejidad 3 de 4" aria-label="Complejidad 3 de 4">●●●<em>●</em></span>
+        </div>
+        <p class="cards">Cartas: 52 + papel y lápiz</p>
+      </a>
+      <a class="game-card" href="/catalogo.html#bonus-solitarios" data-tags="solitarios" data-name="Klondike y Pirámide Bonus: dos solitarios">
+        <div class="top"><span class="num">+</span><span class="cat">Solitarios</span></div>
+        <h3>Klondike y Pirámide</h3>
+        <p class="alias">Bonus: dos solitarios</p>
+        <p>Dos solitarios para cuando nadie más quiere jugar.</p>
+        <div class="meta">
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><circle cx="17" cy="9" r="2.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0M15 20a5 5 0 0 1 6.5-4.8"/></svg>1</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>5–15 min</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 4v5c0 4.5-3 8-7 9-4-1-7-4.5-7-9V7z"/></svg>8+</span>
+          <span class="lv" title="Complejidad 1 de 4" aria-label="Complejidad 1 de 4">●<em>●●●</em></span>
+        </div>
+        <p class="cards">Cartas: 52</p>
+      </a>
+    </div>
+    <p id="empty" hidden>No hay juegos que coincidan con ese filtro o búsqueda.</p>
+
+    <p class="legend">Complejidad: ● se explica en un minuto · ●●●● requiere una partida de práctica. Las duraciones son por partida completa. ¿Prefieres todo junto? <a href="/catalogo.html">Lee las reglas en línea</a> o <a href="/MIL_IDEAS_catalogo.pdf">descarga el catálogo en PDF</a>.</p>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <a class="brand" href="/" aria-label="MIL FOCOS, inicio">
+        <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"/><path d="M10 21h4"/><path d="M12 3a6 6 0 0 0-4 10.5c.7.6 1 1.3 1 2.5h6c0-1.2.3-1.9 1-2.5A6 6 0 0 0 12 3z" fill="#F5C518"/></svg>
+        Mil Focos
+      </a>
+      <p style="margin-top:.9rem">MIL FOCOS es un proyecto personal de José Cáceres, en Lima. MIL IDEAS es su primer catálogo: veinte juegos para un mazo estándar de cartas.</p>
+    </div>
+    <div>
+      <h4>Sitio</h4>
+      <ul>
+        <li><a href="/">Inicio</a></li>
+        <li><a href="/juegos/">Juegos</a></li>
+        <li><a href="/catalogo.html">Reglas en línea</a></li>
+        <li><a href="/MIL_IDEAS_catalogo.pdf">Catálogo en PDF</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contacto</h4>
+      <ul>
+        <li><a href="https://github.com/Josexato/milfocos/issues">Sugerencias y correcciones en GitHub</a></li>
+      </ul>
+    </div>
+    <div class="legal">
+      <span>© <span data-year>2026</span> MIL FOCOS. Los nombres de juegos mencionados pertenecen a sus editores; las adaptaciones son caseras y no oficiales.</span>
+      <span>Un mazo. Veinte juegos.</span>
+    </div>
+  </div>
+</footer>
+
+
+<script src="/assets/js/site.js" defer></script>
+</body>
+</html>

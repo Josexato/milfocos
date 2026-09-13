@@ -1,145 +1,317 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<title>Mil Focos — Un mazo, veinte juegos</title>
-<meta name="description" content="Catálogo gratuito de 20 juegos de cartas (clásicos, de bazas y adaptaciones de juegos modernos como Regicide, Trio, Flip 7 y The Mind) que se juegan con un solo mazo de 52 cartas. Reglas completas en PDF.">
-<meta property="og:title" content="Mil Focos — Un mazo, veinte juegos">
-<meta property="og:description" content="20 juegos de cartas con un solo mazo. Reglas completas, gratis, en PDF.">
-<meta property="og:url" content="https://milfocos.com/">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="preload" href="fonts/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link href="fonts/bricolage.css" rel="stylesheet">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231b2a4a'/%3E%3Ccircle cx='32' cy='27' r='15' fill='%23f5c518'/%3E%3Crect x='24' y='42' width='16' height='10' rx='3' fill='%23fff'/%3E%3C/svg%3E">
+<title>MIL IDEAS | 20 juegos con una baraja de cartas | MIL FOCOS</title>
+<meta name="description" content="Descubre 20 juegos completos para jugar con una baraja estándar de 52 cartas + 2 comodines. Reglas, variantes y catálogo gratuito de MIL IDEAS.">
+<link rel="canonical" href="https://milfocos.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MIL FOCOS">
+<meta property="og:title" content="MIL IDEAS · Un mazo. Veinte juegos.">
+<meta property="og:description" content="20 juegos completos para jugar con una baraja estándar de 52 cartas + 2 comodines. Reglas, variantes y catálogo gratuito.">
+<meta property="og:url" content="https://milfocos.com/">
+<meta property="og:image" content="https://milfocos.com/assets/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0D2A4A">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230D2A4A'/%3E%3Ccircle cx='32' cy='27' r='15' fill='%23F5C518'/%3E%3Crect x='24' y='42' width='16' height='10' rx='3' fill='%23fff'/%3E%3C/svg%3E">
+<link rel="preload" href="/fonts/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/img/producto-560.webp" as="image" type="image/webp" media="(max-width:900px)">
+<link rel="preload" href="/assets/img/producto-960.webp" as="image" type="image/webp" media="(min-width:901px)">
+<link rel="stylesheet" href="/fonts/bricolage.css">
+<link rel="stylesheet" href="/assets/css/site.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"MIL FOCOS","alternateName":"MIL IDEAS","url":"https://milfocos.com/","inLanguage":"es","description":"20 juegos completos para jugar con una baraja estándar de 52 cartas + 2 comodines. Reglas, variantes y catálogo gratuito de MIL IDEAS."}
+</script>
 <style>
-:root{--ink:#1b2a4a;--ink-2:#3d4a66;--paper:#ffffff;--paper-2:#f3f1ea;--line:#d9d6cc;--red:#c8102e;--yellow:#f5c518;--max:72rem}
-*{box-sizing:border-box}
-html{font-family:"Bricolage Grotesque",system-ui,sans-serif;color:var(--ink);background:var(--paper);font-size:17px;line-height:1.5;-webkit-text-size-adjust:100%}
-body{margin:0}
-a{color:inherit}
-h1,h2,h3{margin:0;font-weight:700;line-height:1.05;letter-spacing:-.01em}
-p{margin:0 0 .7em}
-.wrap{max-width:var(--max);margin:0 auto;padding:0 clamp(1rem,4vw,2.5rem)}
-.red{color:var(--red)}
-.brand{display:inline-flex;align-items:center;gap:.5rem;font-weight:800;text-decoration:none;font-size:1.15rem;letter-spacing:-.02em}
-.brand .bulb{width:1.35rem;height:1.35rem;background:var(--yellow);border-radius:50% 50% 45% 45%;position:relative;box-shadow:inset 0 -5px 0 rgba(0,0,0,.08)}
-.brand .bulb:after{content:"";position:absolute;left:36%;right:36%;bottom:-.22rem;height:.28rem;background:var(--ink);border-radius:2px}
-header.top{display:flex;justify-content:space-between;align-items:center;padding:1.1rem 0;gap:1rem;flex-wrap:wrap}
-header.top nav a{margin-left:1.2rem;text-decoration:none;font-weight:600}
-header.top nav a:hover{text-decoration:underline;text-underline-offset:.2em}
-.btn{display:inline-block;background:var(--ink);color:#fff;text-decoration:none;font-weight:700;padding:.85rem 1.4rem;border-radius:.6rem;border:2px solid var(--ink)}
-.btn:hover{background:#fff;color:var(--ink)}
-.btn.ghost{background:transparent;color:var(--ink)}
-.btn.ghost:hover{background:var(--ink);color:#fff}
-footer{border-top:1px solid var(--line);margin-top:4rem;padding:2rem 0 3rem;font-size:.9rem;color:var(--ink-2)}
-footer p{max-width:60ch}
-:focus-visible{outline:3px solid var(--yellow);outline-offset:2px}
-@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
-</style>
-
-<style>
-.hero{display:grid;grid-template-columns:1.15fr 1fr;gap:2rem;align-items:center;padding:3rem 0 4rem;min-height:70vh}
-.hero h1{font-size:clamp(2.6rem,7vw,5.4rem);font-variation-settings:"wdth" 80;font-weight:800;line-height:.95;letter-spacing:-.03em}
+/* ---- Estilos propios de la home ---- */
+.hero{padding-block:clamp(2rem,6vw,4.5rem) clamp(2.5rem,6vw,4rem)}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(1.5rem,5vw,4rem);align-items:center}
+.hero h1{font-size:clamp(2.9rem,8vw,5.6rem);letter-spacing:-.04em;font-variation-settings:"wdth" 85;line-height:.95}
 .hero h1 span{display:block}
-.hero .lead{font-size:1.2rem;max-width:34ch;margin:1.4rem 0 1.8rem;color:var(--ink-2)}
-.hero .cta{display:flex;gap:.8rem;flex-wrap:wrap;align-items:center}
-.hero .note{font-size:.85rem;color:var(--ink-2);margin-top:1rem}
-.fan{position:relative;height:22rem;display:flex;justify-content:center;align-items:center}
-.card{position:absolute;width:9.5rem;aspect-ratio:5/7;background:#fff;border:1px solid var(--line);border-radius:.7rem;box-shadow:0 12px 30px rgba(27,42,74,.16),0 1px 2px rgba(27,42,74,.2);transform:translateX(var(--x)) rotate(var(--r));transform-origin:50% 130%;font-weight:800;color:var(--ink);transition:transform .35s cubic-bezier(.2,.8,.2,1)}
-.card.red{color:var(--red)}
-.card .tl,.card .br{position:absolute;font-size:1.05rem;line-height:1;text-align:center}
-.card .tl{top:.55rem;left:.6rem}
-.card .br{bottom:.55rem;right:.6rem;transform:rotate(180deg)}
-.card .big{position:absolute;inset:0;display:grid;place-items:center;font-size:4.2rem}
-.fan:hover .card{transform:translateX(calc(var(--x)*1.35)) rotate(calc(var(--r)*1.25)) translateY(-.5rem)}
-.list{padding:1rem 0 0}
-.list h2{font-size:clamp(1.6rem,3.5vw,2.4rem);margin-bottom:.4rem}
-.list > p{color:var(--ink-2);max-width:60ch}
-.games{list-style:none;padding:0;margin:1.6rem 0 0;border-top:2px solid var(--ink)}
-.games li.cat h3{font-size:.95rem;font-weight:700;padding:1.4rem 0 .5rem;color:var(--ink-2)}
-.games li a{display:grid;grid-template-columns:2.4rem 1fr 6.5rem 6.5rem 4.6rem;gap:.8rem;align-items:center;padding:.65rem 0;border-bottom:1px solid var(--line);text-decoration:none}
-.games li a:hover .nm{text-decoration:underline;text-underline-offset:.2em}
-.games .n{font-weight:800;color:var(--red)}
-.games .nm{font-weight:700}
-.games .nm small{display:block;font-weight:400;color:var(--ink-2);font-size:.88rem}
-.games .pl,.games .du{font-size:.92rem;color:var(--ink-2)}
-.games .lv{font-size:.8rem;letter-spacing:.1em}
-.games .lv em{font-style:normal;color:var(--line)}
-.how{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;padding:3.5rem 0 0}
-.how h3{font-size:1.15rem;margin-bottom:.4rem}
-.how p{color:var(--ink-2);font-size:.97rem}
-@media (max-width:800px){
-  .hero{grid-template-columns:1fr;padding:1.5rem 0 3rem;min-height:0}
-  .fan{height:15rem;order:-1}
-  .card{width:6.6rem} .card .big{font-size:3rem}
-  .games li a{grid-template-columns:2rem 1fr 4.4rem} .games .du,.games .lv{display:none}
-  .how{grid-template-columns:1fr;gap:1.4rem}
+.hero h1 .u{position:relative;display:inline-block}
+.hero h1 .u:after{content:"";position:absolute;left:0;right:0;bottom:.02em;height:.16em;background:var(--mustard);z-index:-1;border-radius:.1em}
+.hero .lead{margin:1.4rem 0 .6rem;font-size:clamp(1.05rem,1.6vw,1.25rem)}
+.hero .lead b{color:var(--navy)}
+.hero .claim{font-weight:700;color:var(--navy);margin-bottom:1.6rem}
+.hero .cta{display:flex;gap:.75rem;flex-wrap:wrap}
+.hero .visual{position:relative;isolation:isolate}
+.hero .visual:before{content:"";position:absolute;inset:8% -2% 2% 4%;background:var(--mustard);border-radius:42% 58% 55% 45% / 45% 40% 60% 55%;z-index:-1}
+.hero .visual img{width:100%;max-width:34rem;margin:0 auto}
+@media (prefers-reduced-motion:no-preference){
+  .hero .visual img{transition:transform .5s var(--ease)}
+  .hero .visual:hover img{transform:translateY(-6px) rotate(-1deg)}
 }
+@media (max-width:860px){
+  .hero .wrap{grid-template-columns:1fr}
+  .hero .visual{order:-1;max-width:22rem;margin:0 auto}
+  .hero .cta .btn{flex:1 1 100%}
+}
+
+/* Franja de valor */
+.values{border-block:1px solid var(--line);background:var(--cream-2)}
+.values .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;padding-block:1.6rem}
+.value{display:flex;gap:.8rem;align-items:flex-start}
+.value .ic{flex:none;width:2.6rem;height:2.6rem;border-radius:var(--r);background:var(--mustard);display:grid;place-items:center}
+.value .ic svg{width:1.4rem;height:1.4rem}
+.value b{display:block;font-size:1.05rem;letter-spacing:-.01em}
+.value span{font-size:.9rem;color:var(--ink-2)}
+@media (max-width:980px){.values .wrap{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:480px){.values .wrap{grid-template-columns:1fr}}
+
+/* ¿Qué encontrarás? */
+.kinds a{display:flex;flex-direction:column;gap:.6rem;padding:1.4rem;border-radius:var(--r-lg);text-decoration:none;border:1px solid var(--line);background:#fff;min-height:12rem;transition:transform .18s var(--ease),border-color .18s var(--ease)}
+.kinds a:hover{transform:translateY(-3px);border-color:var(--navy)}
+.kinds .suit{font-size:3rem;line-height:1;font-weight:400}
+.kinds h3{font-size:1.3rem}
+.kinds p{margin:0;color:var(--ink-2);font-size:.95rem;flex:1}
+.kinds .go{font-weight:700;font-size:.9rem}
+.kinds .k1{background:#FFF8DF}.kinds .k2{background:#EEF3F9}.kinds .k3{background:#FCEEEF}.kinds .k4{background:#EAF4EE}
+
+/* Catálogo */
+.catalog .wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.5rem,5vw,4rem);align-items:center}
+.catalog .cover{justify-self:center;width:min(100%,22rem);border-radius:var(--r);overflow:hidden;box-shadow:0 1px 0 var(--line),0 24px 40px -28px rgba(13,42,74,.45);transform:rotate(-2deg)}
+.catalog h2{font-size:clamp(2rem,4vw,3rem)}
+.catalog .note{font-size:.9rem;color:var(--ink-2);margin:.8rem 0 0}
+@media (max-width:860px){.catalog .wrap{grid-template-columns:1fr}.catalog .cover{width:min(100%,16rem);order:-1}}
+
+/* Selección de juegos */
+.picks{grid-template-columns:repeat(5,1fr)}
+@media (max-width:1100px){.picks{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:700px){.picks{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:400px){.picks{grid-template-columns:1fr}}
+
+/* Por qué existe */
+.why .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(1.5rem,5vw,4rem);align-items:center}
+.why img{border-radius:var(--r-lg);width:100%;aspect-ratio:5/3;object-fit:cover}
+.why blockquote{margin:1.4rem 0 0;padding-left:1rem;border-left:4px solid var(--mustard);font-weight:700;font-size:1.25rem;letter-spacing:-.01em}
+@media (max-width:860px){.why .wrap{grid-template-columns:1fr}}
+
+/* Cómo funciona */
+.steps{counter-reset:s;grid-template-columns:repeat(3,1fr)}
+@media (max-width:900px){.steps{grid-template-columns:1fr}}
+.steps .card{position:relative;padding-top:1.4rem}
+.steps .card:before{counter-increment:s;content:counter(s,decimal-leading-zero);position:absolute;top:-.9rem;left:1.1rem;background:var(--mustard);font-weight:800;padding:.15rem .6rem;border-radius:.4rem;font-size:.9rem}
+.steps p{margin:0;color:var(--ink-2)}
+.steps h3{margin-bottom:.4rem}
 </style>
 </head>
 <body>
-<div class="wrap">
-<header class="top">
-  <a class="brand" href="/"><span class="bulb" aria-hidden="true"></span>Mil Focos</a>
-  <nav><a href="catalogo.html">Reglas</a><a href="Un_mazo_20_juegos.pdf">PDF</a><a href="#como">Cómo funciona</a></nav>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="MIL FOCOS, inicio">
+      <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"/><path d="M10 21h4"/><path d="M12 3a6 6 0 0 0-4 10.5c.7.6 1 1.3 1 2.5h6c0-1.2.3-1.9 1-2.5A6 6 0 0 0 12 3z" fill="#F5C518"/></svg>
+      Mil Focos
+    </a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="site-nav" aria-label="Abrir menú">
+      <svg class="open" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      <svg class="close" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+    <nav class="nav" id="site-nav" aria-label="Principal">
+      <a href="/" aria-current="page">Inicio</a>
+      <a href="/juegos/">Juegos</a>
+      <a href="/#catalogo">Catálogo</a>
+      <a href="/#como">Cómo funciona</a>
+      <a href="/#faq">Preguntas</a>
+      <a class="btn primary" href="/MIL_IDEAS_catalogo.pdf">Descargar catálogo</a>
+    </nav>
+  </div>
 </header>
 
-<section class="hero">
-  <div>
-    <h1><span>Un mazo.</span><span>Veinte juegos.</span></h1>
-    <p class="lead">Clásicos, juegos de bazas y adaptaciones de juegos modernos (Regicide, Trio, Flip 7, The Mind) que se juegan con las 52 cartas y los 2 comodines que ya tienes en un cajón.</p>
-    <div class="cta">
-      <a class="btn" href="Un_mazo_20_juegos.pdf">Descargar el catálogo (PDF)</a>
-      <a class="btn ghost" href="catalogo.html">Leer las reglas en línea</a>
+<main id="contenido">
+
+<!-- ===== HERO ===== -->
+<section class="hero" aria-labelledby="h1">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow rise">Mil Focos presenta Mil Ideas</p>
+      <h1 id="h1" class="rise d1"><span>Un mazo.</span><span><span class="u">Veinte juegos.</span></span></h1>
+      <p class="lead rise d2"><b>MIL IDEAS</b> reúne 20 juegos completos que puedes jugar con una baraja estándar de 52 cartas + 2 comodines: clásicos, familiares, modernos y cooperativos.</p>
+      <p class="claim rise d2">Grandes juegos empiezan con simples ideas.</p>
+      <div class="cta rise d3">
+        <a class="btn primary" href="/MIL_IDEAS_catalogo.pdf">
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5M4 20h16"/></svg>
+          Descargar catálogo
+        </a>
+        <a class="btn ghost" href="/juegos/">Ver juegos
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
     </div>
-    <p class="note">Gratis. 24 páginas. Reglas completas, listas para jugar sin buscar nada más.</p>
+    <div class="visual rise d1">
+      <img src="/assets/img/producto-960.webp" srcset="/assets/img/producto-560.webp 560w, /assets/img/producto-960.webp 960w" sizes="(max-width:860px) 22rem, 34rem" width="1241" height="1135" alt="Caja de MIL IDEAS, amarilla con una bombilla, junto a un abanico de cartas: as de picas, corazones, diamantes, tréboles y un comodín" fetchpriority="high">
+    </div>
   </div>
-  <div class="fan" aria-hidden="true"><div class="card " style="--r:-24deg;--x:-3.2rem"><span class="tl">A<br>♣</span><span class="big">♣</span><span class="br">A<br>♣</span></div><div class="card red" style="--r:-8deg;--x:-1.1rem"><span class="tl">K<br>♥</span><span class="big">♥</span><span class="br">K<br>♥</span></div><div class="card red" style="--r:8deg;--x:1.1rem"><span class="tl">Q<br>♦</span><span class="big">♦</span><span class="br">Q<br>♦</span></div><div class="card " style="--r:24deg;--x:3.2rem"><span class="tl">J<br>♠</span><span class="big">♠</span><span class="br">J<br>♠</span></div></div>
 </section>
 
-<section class="list" id="juegos">
-  <h2>Los veinte juegos</h2>
-  <p>Ordenados de más simple a más exigente dentro de cada grupo. La complejidad va de ● (se explica en un minuto) a ●●●● (requiere una partida de práctica).</p>
-  <ul class="games">
-<li class="cat"><h3>Rápidos y familiares</h3></li>
-<li><a href="catalogo.html#01-ocho-loco"><span class="n">01</span><span class="nm">Ocho Loco<small>El UNO original, con naipes.</small></span><span class="pl">2–7</span><span class="du">15–30 min</span><span class="lv" title="Complejidad 1 de 4">●<em>●●●</em></span></a></li>
-<li><a href="catalogo.html#02-mentiroso"><span class="n">02</span><span class="nm">Mentiroso<small>Deshazte de tus cartas mintiendo sin que te pillen.</small></span><span class="pl">3–8</span><span class="du">15–25 min</span><span class="lv" title="Complejidad 1 de 4">●<em>●●●</em></span></a></li>
-<li><a href="catalogo.html#03-palace"><span class="n">03</span><span class="nm">Palace<small>Cartas ocultas, cartas a ciegas y el que se queda con cartas pierde.</small></span><span class="pl">2–5</span><span class="du">20–30 min</span><span class="lv" title="Complejidad 2 de 4">●●<em>●●</em></span></a></li>
-<li><a href="catalogo.html#04-presidente"><span class="n">04</span><span class="nm">Presidente<small>Jerarquía social: el que gana manda y recibe las mejores cartas.</small></span><span class="pl">4–7</span><span class="du">30–45 min</span><span class="lv" title="Complejidad 2 de 4">●●<em>●●</em></span></a></li>
-<li><a href="catalogo.html#05-golf"><span class="n">05</span><span class="nm">Golf<small>El Skyjo con naipes: suma lo menos posible.</small></span><span class="pl">2–6</span><span class="du">30–45 min</span><span class="lv" title="Complejidad 1 de 4">●<em>●●●</em></span></a></li>
-<li><a href="catalogo.html#06-cabo"><span class="n">06</span><span class="nm">Cabo<small>Memoria y poderes: espía, intercambia y canta «¡Cabo!».</small></span><span class="pl">2–5</span><span class="du">30–45 min</span><span class="lv" title="Complejidad 2 de 4">●●<em>●●</em></span></a></li>
-<li><a href="catalogo.html#07-manotazo-egipcio"><span class="n">07</span><span class="nm">Manotazo egipcio<small>Reflejos puros: pega la pila cuando salgan dobles.</small></span><span class="pl">2–6</span><span class="du">10–20 min</span><span class="lv" title="Complejidad 1 de 4">●<em>●●●</em></span></a></li>
-<li class="cat"><h3>Juegos de bazas</h3></li>
-<li><a href="catalogo.html#08-corazones"><span class="n">08</span><span class="nm">Corazones<small>Evita los corazones y la Dama de picas... o llévatelos todos.</small></span><span class="pl">3–5 (ideal 4)</span><span class="du">45–60 min</span><span class="lv" title="Complejidad 2 de 4">●●<em>●●</em></span></a></li>
-<li><a href="catalogo.html#09-espadas"><span class="n">09</span><span class="nm">Espadas<small>Apuesta bazas en equipo; las picas siempre triunfan.</small></span><span class="pl">4 (parejas)</span><span class="du">45–60 min</span><span class="lv" title="Complejidad 3 de 4">●●●<em>●</em></span></a></li>
-<li><a href="catalogo.html#10-apuesta-exacta"><span class="n">10</span><span class="nm">Apuesta exacta<small>El Skull King / Wizard casero: acierta exactamente tus bazas.</small></span><span class="pl">3–7</span><span class="du">30–45 min</span><span class="lv" title="Complejidad 2 de 4">●●<em>●●</em></span></a></li>
-<li><a href="catalogo.html#11-euchre"><span class="n">11</span><span class="nm">Euchre<small>Bazas rápidas con 24 cartas y jotas que cambian de palo.</small></span><span class="pl">4 (parejas)</span><span class="du">30–40 min</span><span class="lv" title="Complejidad 3 de 4">●●●<em>●</em></span></a></li>
-<li><a href="catalogo.html#12-durak"><span class="n">12</span><span class="nm">Durak<small>Ataca y defiende; el último con cartas es el «tonto».</small></span><span class="pl">2–6</span><span class="du">20–30 min</span><span class="lv" title="Complejidad 2 de 4">●●<em>●●</em></span></a></li>
-<li class="cat"><h3>Combinaciones y captura</h3></li>
-<li><a href="catalogo.html#13-gin-rummy"><span class="n">13</span><span class="nm">Gin Rummy<small>El mejor rummy para dos: forma grupos y «toca» a tiempo.</small></span><span class="pl">2</span><span class="du">30–60 min</span><span class="lv" title="Complejidad 2 de 4">●●<em>●●</em></span></a></li>
-<li><a href="catalogo.html#14-casino"><span class="n">14</span><span class="nm">Casino<small>Captura cartas de la mesa sumando y construyendo.</small></span><span class="pl">2–4</span><span class="du">30–45 min</span><span class="lv" title="Complejidad 3 de 4">●●●<em>●</em></span></a></li>
-<li><a href="catalogo.html#15-cribbage"><span class="n">15</span><span class="nm">Cribbage<small>Clásico de puntuación combinatoria; no hace falta tablero.</small></span><span class="pl">2</span><span class="du">30–40 min</span><span class="lv" title="Complejidad 4 de 4">●●●●<em></em></span></a></li>
-<li class="cat"><h3>Modernos, cooperativos y adaptaciones</h3></li>
-<li><a href="catalogo.html#16-regicide"><span class="n">16</span><span class="nm">Regicide<small>Derroten juntos a 12 monarcas; la joya moderna con naipes.</small></span><span class="pl">1–4 · coop</span><span class="du">20–40 min</span><span class="lv" title="Complejidad 3 de 4">●●●<em>●</em></span></a></li>
-<li><a href="catalogo.html#17-trio"><span class="n">17</span><span class="nm">Trio<small>Memoria y deducción: encuentra tres cartas iguales.</small></span><span class="pl">3–6</span><span class="du">15–20 min</span><span class="lv" title="Complejidad 1 de 4">●<em>●●●</em></span></a></li>
-<li><a href="catalogo.html#18-siete-a-la-vista"><span class="n">18</span><span class="nm">Siete a la vista<small>Presiona tu suerte: ¿otra carta o me planto?</small></span><span class="pl">3–8</span><span class="du">15–25 min</span><span class="lv" title="Complejidad 1 de 4">●<em>●●●</em></span></a></li>
-<li><a href="catalogo.html#19-la-mente"><span class="n">19</span><span class="nm">La Mente<small>Jueguen en orden ascendente sin hablar. Sí, en serio.</small></span><span class="pl">2–4 · coop</span><span class="du">15–25 min</span><span class="lv" title="Complejidad 1 de 4">●<em>●●●</em></span></a></li>
-<li><a href="catalogo.html#20-texas-hold-em-con-puntos"><span class="n">20</span><span class="nm">Texas Hold'em con puntos<small>Póker sin fichas: se anota en papel.</small></span><span class="pl">2–8</span><span class="du">45–90 min</span><span class="lv" title="Complejidad 3 de 4">●●●<em>●</em></span></a></li>
-    <li class="cat"><h3>Bonus</h3></li>
-    <li><a href="catalogo.html#bonus-solitarios"><span class="n">+</span><span class="nm">Klondike y Pirámide<small>Dos solitarios para cuando nadie más quiere jugar.</small></span><span class="pl">1</span><span class="du">5–15 min</span><span class="lv">●<em>●●●</em></span></a></li>
-  </ul>
+<!-- ===== FRANJA DE VALOR ===== -->
+<section class="values" aria-label="Lo esencial">
+  <div class="wrap">
+    <div class="value"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#0D2A4A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-4 10.5c.7.6 1 1.3 1 2.5h6c0-1.2.3-1.9 1-2.5A6 6 0 0 0 12 3z"/></svg></span><div><b>20 juegos</b><span>Clásicos, modernos y cooperativos.</span></div></div>
+    <div class="value"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#0D2A4A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5.5A2.5 2.5 0 0 1 5.5 3H11v16H5.5A2.5 2.5 0 0 0 3 21z"/><path d="M21 5.5A2.5 2.5 0 0 0 18.5 3H13v16h5.5a2.5 2.5 0 0 1 2.5 2z"/></svg></span><div><b>Reglas completas</b><span>Explicadas para empezar a jugar sin buscar nada más.</span></div></div>
+    <div class="value"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#0D2A4A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="3" width="11" height="16" rx="2"/><path d="M4 7v12a2 2 0 0 0 2 2h9"/></svg></span><div><b>52 cartas + 2 comodines</b><span>Un solo mazo, muchas posibilidades.</span></div></div>
+    <div class="value"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#0D2A4A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><circle cx="17" cy="9" r="2.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0M15 20a5 5 0 0 1 6.5-4.8"/></svg></span><div><b>De 1 a 8 jugadores</b><span>La mayoría entre 2 y 6. Partidas para distintos grupos y momentos.</span></div></div>
+  </div>
 </section>
 
-<section class="how" id="como">
-  <div><h3>Qué necesitas</h3><p>Un mazo inglés de 52 cartas con sus 2 comodines, y papel y lápiz para anotar puntos. Nada más: ni fichas, ni dados, ni tablero.</p></div>
-  <div><h3>Por qué existe</h3><p>Muchos juegos de cartas modernos son, en el fondo, un mazo con arte bonito. Puedes probarlos con naipes y, si te enganchan, comprar la caja original por gusto y para apoyar a su autor.</p></div>
-  <div><h3>Qué son las adaptaciones</h3><p>Trio, Flip 7 y The Mind son versiones caseras para naipes, marcadas como tales. Regicide se publica con reglas para mazo estándar; aquí están completas en español.</p></div>
+<!-- ===== ¿QUÉ ENCONTRARÁS? ===== -->
+<section class="section" id="que" aria-labelledby="h-que">
+  <div class="wrap">
+    <div class="section-head">
+      <div><h2 id="h-que">¿Qué encontrarás?</h2><p>Veinte juegos, cuatro formas de jugar. Un mazo, todos los planes.</p></div>
+    </div>
+    <div class="grid c4 kinds">
+      <a class="k1" href="/juegos/?f=clasicos"><span class="suit" aria-hidden="true">♠</span><h3>Clásicos</h3><p>Juegos conocidos que siguen funcionando: Corazones, Espadas, Gin Rummy, Casino, Cribbage.</p><span class="go">Ver clásicos →</span></a>
+      <a class="k2" href="/juegos/?f=familiar"><span class="suit" aria-hidden="true">♣</span><h3>Familiares</h3><p>Reglas simples y partidas accesibles: Ocho Loco, Golf, Mentiroso, Manotazo egipcio.</p><span class="go">Ver familiares →</span></a>
+      <a class="k3" href="/juegos/?f=modernos"><span class="suit red" aria-hidden="true">♥</span><h3>Modernos y adaptaciones</h3><p>Ideas recientes llevadas al mazo estándar: Regicide, Trio, Siete a la vista, La Mente.</p><span class="go">Ver modernos →</span></a>
+      <a class="k4" href="/juegos/?f=cooperativos"><span class="suit red" aria-hidden="true">♦</span><h3>Cooperativos</h3><p>Jueguen juntos contra el propio sistema: Regicide y La Mente.</p><span class="go">Ver cooperativos →</span></a>
+    </div>
+  </div>
 </section>
 
-<footer>
-  <p><strong>Mil Focos</strong> — un proyecto personal de José Cáceres, Lima. Los nombres de juegos mencionados pertenecen a sus editores; las adaptaciones son caseras y no oficiales. Si un juego te gusta, compra la caja.</p>
-  <p>Catálogo 2026. Sugerencias y correcciones: escríbeme por <a href="https://github.com/Josexato/milfocos/issues">GitHub</a>.</p>
+<!-- ===== CATÁLOGO ===== -->
+<section class="section cream catalog" id="catalogo" aria-labelledby="h-cat">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Catálogo y manual</p>
+      <h2 id="h-cat">Todo el catálogo en un solo PDF.</h2>
+      <p class="lead">20 reglas completas, preparación, variantes, consejos y tiempos de juego. Descárgalo y empieza con el mazo que ya tienes en casa.</p>
+      <p><a class="btn primary" href="/MIL_IDEAS_catalogo.pdf">
+        <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5M4 20h16"/></svg>
+        Descargar catálogo</a></p>
+      <p class="note">PDF gratuito, 24 páginas en A4, sin registro. También puedes <a href="/catalogo.html">leer todas las reglas en línea</a>.</p>
+    </div>
+    <a class="cover" href="/MIL_IDEAS_catalogo.pdf" aria-label="Descargar el catálogo MIL IDEAS en PDF">
+      <img src="/assets/img/catalogo-portada.webp" width="640" height="906" alt="Portada del catálogo MIL IDEAS: cuatro ases sobre fondo amarillo y azul" loading="lazy">
+    </a>
+  </div>
+</section>
+
+<!-- ===== SELECCIÓN DE JUEGOS ===== -->
+<section class="section" id="juegos" aria-labelledby="h-sel">
+  <div class="wrap">
+    <div class="section-head">
+      <div><h2 id="h-sel">Algunos juegos del catálogo</h2><p>Clásicos que todos conocen, joyas por descubrir y nuevas formas de jugar.</p></div>
+      <a class="link-arrow" href="/juegos/">Ver los 20 juegos →</a>
+    </div>
+    <div class="grid picks">
+      <a class="game-card" href="/catalogo.html#01-ocho-loco"><div class="top"><span class="num">01</span><span class="cat">Familiar</span></div><h3>Ocho Loco</h3><p>El UNO original, con naipes.</p></a>
+      <a class="game-card" href="/catalogo.html#03-palace"><div class="top"><span class="num">03</span><span class="cat">Familiar</span></div><h3>Palace</h3><p>Cartas ocultas, cartas a ciegas y el que se queda con cartas pierde.</p></a>
+      <a class="game-card" href="/catalogo.html#04-presidente"><div class="top"><span class="num">04</span><span class="cat">Familiar</span></div><h3>Presidente</h3><p>Jerarquía social: el que gana manda y recibe las mejores cartas.</p></a>
+      <a class="game-card" href="/catalogo.html#05-golf"><div class="top"><span class="num">05</span><span class="cat">Familiar</span></div><h3>Golf</h3><p>El Skyjo con naipes: suma lo menos posible.</p></a>
+      <a class="game-card" href="/catalogo.html#06-cabo"><div class="top"><span class="num">06</span><span class="cat">Memoria</span></div><h3>Cabo</h3><p>Memoria y poderes: espía, intercambia y canta «¡Cabo!».</p></a>
+      <a class="game-card" href="/catalogo.html#08-corazones"><div class="top"><span class="num">08</span><span class="cat">Bazas</span></div><h3>Corazones</h3><p>Evita los corazones y la Dama de picas… o llévatelos todos.</p></a>
+      <a class="game-card" href="/catalogo.html#09-espadas"><div class="top"><span class="num">09</span><span class="cat">Bazas</span></div><h3>Espadas</h3><p>Apuesta bazas en equipo; las picas siempre triunfan.</p></a>
+      <a class="game-card" href="/catalogo.html#16-regicide"><div class="top"><span class="num">16</span><span class="cat">Cooperativo</span></div><h3>Regicide</h3><p>Derroten juntos a 12 monarcas; la joya moderna con naipes.</p></a>
+      <a class="game-card" href="/catalogo.html#17-trio"><div class="top"><span class="num">17</span><span class="cat">Adaptación</span></div><h3>Trio</h3><p>Memoria y deducción: encuentra tres cartas iguales.</p></a>
+      <a class="game-card" href="/catalogo.html#18-siete-a-la-vista"><div class="top"><span class="num">18</span><span class="cat">Adaptación</span></div><h3>Siete a la vista</h3><p>Presiona tu suerte: ¿otra carta o me planto?</p></a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== POR QUÉ EXISTE ===== -->
+<section class="section cream why" id="por-que" aria-labelledby="h-why">
+  <div class="wrap">
+    <img src="/assets/img/mesa.webp" width="672" height="401" alt="Cartas y un mazo boca abajo sobre una mesa de madera" loading="lazy">
+    <div>
+      <p class="eyebrow">Por qué existe</p>
+      <h2 id="h-why">Más juego con menos componentes.</h2>
+      <p class="lead">No siempre hacen falta más componentes para tener más juego. MIL IDEAS nació de la curiosidad por descubrir cuánto puede hacerse con una baraja común: aprender mecánicas, adaptar ideas, inventar variantes y reunir a la gente alrededor de una mesa.</p>
+      <p class="lead">Muchos juegos de cartas modernos son, en el fondo, un mazo con arte bonito. Puedes probarlos con naipes y, si te enganchan, comprar la caja original por gusto y para apoyar a su autor.</p>
+      <blockquote>Más juegos. Más gente. Mejores historias.</blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CÓMO FUNCIONA ===== -->
+<section class="section" id="como" aria-labelledby="h-como">
+  <div class="wrap">
+    <div class="section-head">
+      <div><h2 id="h-como">Cómo funciona</h2><p>Tres pasos y están jugando.</p></div>
+    </div>
+    <div class="grid steps">
+      <div class="card"><h3>Consigue un mazo</h3><p>Uno inglés (tipo póker) de 52 cartas con sus 2 comodines, y papel y lápiz para anotar puntos. Nada más: ni fichas, ni dados, ni tablero.</p></div>
+      <div class="card"><h3>Elige un juego</h3><p>Filtra por tipo, jugadores o duración en <a href="/juegos/">la lista de juegos</a>. Cada ficha indica cuántas cartas usa y qué retirar del mazo cuando hace falta.</p></div>
+      <div class="card"><h3>Lee la regla y juega</h3><p>Preparación, cómo se juega, fin de partida, variantes y un consejo por juego. En línea o en el <a href="/MIL_IDEAS_catalogo.pdf">PDF</a> para llevar.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="section tight" id="faq" aria-labelledby="h-faq">
+  <div class="wrap" style="max-width:52rem">
+    <div class="section-head"><div><h2 id="h-faq">Preguntas frecuentes</h2></div></div>
+    <div class="faq">
+      <div class="faq-item">
+        <h3><button class="faq-q" aria-expanded="false" aria-controls="faq1" id="faq1-q">¿Qué necesito para jugar?<span class="plus" aria-hidden="true">+</span></button></h3>
+        <div class="faq-a" id="faq1" role="region" aria-labelledby="faq1-q" hidden><p>Un mazo inglés de 52 cartas con sus 2 comodines, y papel y lápiz para anotar puntos. Nada más: ni fichas, ni dados, ni tablero.</p></div>
+      </div>
+      <div class="faq-item">
+        <h3><button class="faq-q" aria-expanded="false" aria-controls="faq2" id="faq2-q">¿El catálogo es gratuito?<span class="plus" aria-hidden="true">+</span></button></h3>
+        <div class="faq-a" id="faq2" role="region" aria-labelledby="faq2-q" hidden><p>Sí. Es un PDF de 24 páginas que se descarga directamente, sin registro ni correo. Las mismas reglas están publicadas en línea en <a href="/catalogo.html">la página de reglas</a>.</p></div>
+      </div>
+      <div class="faq-item">
+        <h3><button class="faq-q" aria-expanded="false" aria-controls="faq3" id="faq3-q">¿Los 20 juegos usan siempre las 54 cartas?<span class="plus" aria-hidden="true">+</span></button></h3>
+        <div class="faq-a" id="faq3" role="region" aria-labelledby="faq3-q" hidden><p>No. Muchos usan las 52 sin comodines, y algunos usan menos: Euchre juega con 24 cartas (del 9 al as), Durak con 36 (del 6 al as) y Trio con 36 (del as a la dama de tres palos). Los comodines solo entran donde la ficha lo indica, por ejemplo en Presidente, Golf, Cabo, Regicide o Siete a la vista. Cada ficha dice exactamente qué retirar.</p></div>
+      </div>
+      <div class="faq-item">
+        <h3><button class="faq-q" aria-expanded="false" aria-controls="faq4" id="faq4-q">¿Cuántas personas pueden jugar?<span class="plus" aria-hidden="true">+</span></button></h3>
+        <div class="faq-a" id="faq4" role="region" aria-labelledby="faq4-q" hidden><p>Desde 1 hasta 8. Regicide se puede jugar en solitario y hay dos solitarios de bonus; Gin Rummy y Cribbage son para dos; Mentiroso, Siete a la vista y Texas Hold'em con puntos llegan a 8. La mayoría de los juegos funciona mejor entre 2 y 6 jugadores.</p></div>
+      </div>
+      <div class="faq-item">
+        <h3><button class="faq-q" aria-expanded="false" aria-controls="faq5" id="faq5-q">¿Hay juegos para niños?<span class="plus" aria-hidden="true">+</span></button></h3>
+        <div class="faq-a" id="faq5" role="region" aria-labelledby="faq5-q" hidden><p>Sí. Ocho Loco y Manotazo egipcio están pensados desde los 6 años; Golf y Trio desde los 7; Mentiroso, Palace, Presidente, Cabo, Durak, Siete a la vista y La Mente desde los 8. Los juegos de bazas y de combinaciones suelen ir mejor a partir de 10, y Texas Hold'em con puntos a partir de 12.</p></div>
+      </div>
+      <div class="faq-item">
+        <h3><button class="faq-q" aria-expanded="false" aria-controls="faq6" id="faq6-q">¿Puedo imprimir el catálogo?<span class="plus" aria-hidden="true">+</span></button></h3>
+        <div class="faq-a" id="faq6" role="region" aria-labelledby="faq6-q" hidden><p>Sí. Está maquetado en A4 (24 páginas) para imprimirlo entero o solo las fichas que vayas a usar. Cada juego ocupa una o dos páginas.</p></div>
+      </div>
+      <div class="faq-item">
+        <h3><button class="faq-q" aria-expanded="false" aria-controls="faq7" id="faq7-q">¿MIL IDEAS reemplaza a los juegos comerciales mencionados?<span class="plus" aria-hidden="true">+</span></button></h3>
+        <div class="faq-a" id="faq7" role="region" aria-labelledby="faq7-q" hidden><p>No. Los nombres de juegos mencionados (Regicide, Trio, Flip 7, The Mind, Skull King, Cabo, entre otros) pertenecen a sus respectivos editores. Regicide se distribuye con una licencia que permite jugarlo con un mazo estándar y sus reglas oficiales están en regicidegame.com; Trio, Flip 7 y The Mind son adaptaciones caseras para naipes, no reglas oficiales. Si un juego te gusta, compra la caja: el arte y los componentes pensados para el juego valen la pena, y así el autor sigue haciendo juegos.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <a class="brand" href="/" aria-label="MIL FOCOS, inicio">
+        <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"/><path d="M10 21h4"/><path d="M12 3a6 6 0 0 0-4 10.5c.7.6 1 1.3 1 2.5h6c0-1.2.3-1.9 1-2.5A6 6 0 0 0 12 3z" fill="#F5C518"/></svg>
+        Mil Focos
+      </a>
+      <p style="margin-top:.9rem">MIL FOCOS es un proyecto personal de José Cáceres, en Lima. MIL IDEAS es su primer catálogo: veinte juegos para un mazo estándar de cartas.</p>
+    </div>
+    <div>
+      <h4>Sitio</h4>
+      <ul>
+        <li><a href="/">Inicio</a></li>
+        <li><a href="/juegos/">Juegos</a></li>
+        <li><a href="/catalogo.html">Reglas en línea</a></li>
+        <li><a href="/MIL_IDEAS_catalogo.pdf">Catálogo en PDF</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contacto</h4>
+      <ul>
+        <li><a href="https://github.com/Josexato/milfocos/issues">Sugerencias y correcciones en GitHub</a></li>
+      </ul>
+    </div>
+    <div class="legal">
+      <span>© <span data-year>2026</span> MIL FOCOS. Los nombres de juegos mencionados pertenecen a sus editores; las adaptaciones son caseras y no oficiales.</span>
+      <span>Un mazo. Veinte juegos.</span>
+    </div>
+  </div>
 </footer>
-</div>
+
+<script src="/assets/js/site.js" defer></script>
 </body>
 </html>
