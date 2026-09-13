@@ -56,17 +56,23 @@
 
   function apply() {
     var q = norm(search ? search.value.trim() : '');
-    var shown = 0;
+    var shown = 0, bonus = false;
     cards.forEach(function (card) {
       var tags = (card.getAttribute('data-tags') || '').split(' ');
       var okTag = active === 'todos' || tags.indexOf(active) !== -1;
       var okText = !q || norm(card.getAttribute('data-name')).indexOf(q) !== -1;
       var show = okTag && okText;
       card.hidden = !show;
-      if (show) shown++;
+      if (!show) return;
+      // El bonus (solitarios) no cuenta entre los 20 juegos de MIL IDEAS
+      if (card.hasAttribute('data-bonus')) bonus = true; else shown++;
     });
-    if (count) count.textContent = shown === 1 ? '1 juego' : shown + ' juegos';
-    if (empty) empty.hidden = shown !== 0;
+    if (count) {
+      var label = shown === 1 ? '1 juego' : shown + ' juegos';
+      if (bonus) label = shown === 0 ? 'Bonus: solitarios' : label + ' + bonus';
+      count.textContent = label;
+    }
+    if (empty) empty.hidden = (shown + (bonus ? 1 : 0)) !== 0;
   }
 
   function setFilter(f, push) {
