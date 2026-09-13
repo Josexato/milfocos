@@ -1,70 +1,55 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<title>Reglas — Mil Focos</title>
-<meta name="description" content="Reglas completas de 20 juegos de cartas con un mazo estándar: Ocho Loco, Palace, Presidente, Cabo, Corazones, Espadas, Gin Rummy, Casino, Cribbage, Regicide y adaptaciones de Trio, Flip 7 y The Mind.">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="preload" href="fonts/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link href="fonts/bricolage.css" rel="stylesheet">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231b2a4a'/%3E%3Ccircle cx='32' cy='27' r='15' fill='%23f5c518'/%3E%3Crect x='24' y='42' width='16' height='10' rx='3' fill='%23fff'/%3E%3C/svg%3E">
+<title>Reglas completas de los 20 juegos de MIL IDEAS | MIL FOCOS</title>
+<meta name="description" content="Reglas completas de 20 juegos de cartas con un mazo estándar: Ocho Loco, Palace, Presidente, Cabo, Corazones, Espadas, Gin Rummy, Casino, Cribbage, Regicide y adaptaciones de Trio, Flip 7 y The Mind.">
+<link rel="canonical" href="https://milfocos.com/catalogo.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="MIL FOCOS">
+<meta property="og:title" content="Reglas completas de los 20 juegos de MIL IDEAS">
+<meta property="og:description" content="Reglas completas de 20 juegos de cartas con un mazo estándar: Ocho Loco, Palace, Presidente, Cabo, Corazones, Espadas, Gin Rummy, Casino, Cribbage, Regicide y adaptaciones de Trio, Flip 7 y The Mind.">
+<meta property="og:url" content="https://milfocos.com/catalogo.html">
+<meta property="og:image" content="https://milfocos.com/assets/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0D2A4A">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230D2A4A'/%3E%3Ccircle cx='32' cy='27' r='15' fill='%23F5C518'/%3E%3Crect x='24' y='42' width='16' height='10' rx='3' fill='%23fff'/%3E%3C/svg%3E">
+<link rel="preload" href="/fonts/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/fonts/bricolage.css">
+<link rel="stylesheet" href="/assets/css/site.css">
 <style>
-:root{--ink:#1b2a4a;--ink-2:#3d4a66;--paper:#ffffff;--paper-2:#f3f1ea;--line:#d9d6cc;--red:#c8102e;--yellow:#f5c518;--max:72rem}
-*{box-sizing:border-box}
-html{font-family:"Bricolage Grotesque",system-ui,sans-serif;color:var(--ink);background:var(--paper);font-size:17px;line-height:1.5;-webkit-text-size-adjust:100%}
-body{margin:0}
-a{color:inherit}
-h1,h2,h3{margin:0;font-weight:700;line-height:1.05;letter-spacing:-.01em}
-p{margin:0 0 .7em}
-.wrap{max-width:var(--max);margin:0 auto;padding:0 clamp(1rem,4vw,2.5rem)}
-.red{color:var(--red)}
-.brand{display:inline-flex;align-items:center;gap:.5rem;font-weight:800;text-decoration:none;font-size:1.15rem;letter-spacing:-.02em}
-.brand .bulb{width:1.35rem;height:1.35rem;background:var(--yellow);border-radius:50% 50% 45% 45%;position:relative;box-shadow:inset 0 -5px 0 rgba(0,0,0,.08)}
-.brand .bulb:after{content:"";position:absolute;left:36%;right:36%;bottom:-.22rem;height:.28rem;background:var(--ink);border-radius:2px}
-header.top{display:flex;justify-content:space-between;align-items:center;padding:1.1rem 0;gap:1rem;flex-wrap:wrap}
-header.top nav a{margin-left:1.2rem;text-decoration:none;font-weight:600}
-header.top nav a:hover{text-decoration:underline;text-underline-offset:.2em}
-.btn{display:inline-block;background:var(--ink);color:#fff;text-decoration:none;font-weight:700;padding:.85rem 1.4rem;border-radius:.6rem;border:2px solid var(--ink)}
-.btn:hover{background:#fff;color:var(--ink)}
-.btn.ghost{background:transparent;color:var(--ink)}
-.btn.ghost:hover{background:var(--ink);color:#fff}
-footer{border-top:1px solid var(--line);margin-top:4rem;padding:2rem 0 3rem;font-size:.9rem;color:var(--ink-2)}
-footer p{max-width:60ch}
-:focus-visible{outline:3px solid var(--yellow);outline-offset:2px}
-@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
-</style>
-
-<style>
-.layout{display:grid;grid-template-columns:15rem 1fr;gap:3rem;align-items:start;padding-top:1rem}
-.toc{position:sticky;top:1rem;max-height:calc(100vh - 2rem);overflow:auto;font-size:.9rem;padding-right:.5rem}
+/* ---- Estilos propios de la página de reglas ---- */
+.layout{display:grid;grid-template-columns:15rem 1fr;gap:3rem;align-items:start;padding-top:2rem}
+.toc{position:sticky;top:5.25rem;max-height:calc(100vh - 6.25rem);overflow:auto;font-size:.9rem;padding-right:.5rem}
 .toc ul{list-style:none;margin:0;padding:0}
-.toc li a{display:flex;gap:.5rem;padding:.28rem 0;text-decoration:none;border-bottom:1px solid var(--line)}
+.toc li a{display:flex;gap:.5rem;padding:.3rem 0;text-decoration:none;border-bottom:1px solid var(--line)}
 .toc li a span{color:var(--red);font-weight:800;min-width:1.6rem}
 .toc li a:hover{text-decoration:underline;text-underline-offset:.2em}
-.toc .pdf{display:block;margin:0 0 .9rem;font-weight:700}
-main{max-width:46rem}
-main > h1{font-size:clamp(2rem,5vw,3.2rem);font-variation-settings:"wdth" 80;letter-spacing:-.03em;margin-bottom:.3rem}
+.toc .pdf{display:inline-flex;margin:0 0 1rem;font-weight:700;background:var(--mustard);border-radius:var(--r-sm);padding:.5rem .8rem;text-decoration:none}
+.toc .pdf:hover{background:var(--mustard-2)}
+main{max-width:46rem;min-width:0}
+main > h1{font-size:clamp(2.2rem,5vw,3.4rem);letter-spacing:-.03em;margin-bottom:.4rem}
 main > .sub{color:var(--ink-2);margin-bottom:2rem;max-width:60ch}
-.game{padding:2.5rem 0 1rem;border-top:3px solid var(--ink);margin-top:2rem;scroll-margin-top:1rem}
+.game{padding:2.5rem 0 1rem;border-top:3px solid var(--navy);margin-top:2rem;scroll-margin-top:5.5rem}
 .gh{display:flex;align-items:baseline;gap:.8rem;flex-wrap:wrap;margin-bottom:.6rem}
 .gh .num{font-size:1.6rem;font-weight:800;color:var(--red)}
 .gh h2{font-size:clamp(1.7rem,4vw,2.4rem)}
 .gh .alias{color:var(--ink-2);font-size:.95rem;flex-basis:100%}
 .ficha{display:flex;flex-wrap:wrap;gap:.4rem;margin:.6rem 0 1rem}
-.ficha span{background:var(--paper-2);border-radius:.4rem;padding:.25rem .6rem;font-size:.85rem}
+.ficha span{background:var(--cream);border-radius:.4rem;padding:.25rem .6rem;font-size:.85rem}
 .ficha span b{color:var(--ink-2);font-weight:600;margin-right:.3rem}
 .intro{font-size:1.1rem;color:var(--ink-2);margin-bottom:1rem}
-.cols{column-count:1}
-h3{font-size:.95rem;text-transform:uppercase;letter-spacing:.06em;color:var(--red);margin:1.2rem 0 .3rem}
-ul,ol{margin:.2rem 0 .8rem;padding-left:1.3rem}
-li{margin-bottom:.25rem}
-.box{background:var(--paper-2);border-left:4px solid var(--red);padding:.7rem 1rem;margin:1rem 0;font-size:.95rem;border-radius:0 .4rem .4rem 0}
-.box b{color:var(--red)}
+.cols h3{font-size:.9rem;text-transform:uppercase;letter-spacing:.08em;color:var(--red);margin:1.2rem 0 .3rem}
+.cols li{margin-bottom:.25rem}
+.box{background:var(--cream);border-left:4px solid var(--mustard);padding:.7rem 1rem;margin:1rem 0;font-size:.95rem;border-radius:0 .4rem .4rem 0}
+.box b{color:var(--navy)}
 table.mini{border-collapse:collapse;font-size:.92rem;margin:.4rem 0 .9rem;width:100%}
 table.mini th,table.mini td{border:1px solid var(--line);padding:.35rem .6rem;text-align:left;vertical-align:top}
-table.mini th{background:var(--paper-2)}
-.tag{display:inline-block;font-size:.65rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:.15rem .5rem;border-radius:.3rem;background:var(--red);color:#fff;vertical-align:middle}
-.tag.coop{background:#1e7d5a} .tag.adapt{background:#b26a00}
+table.mini th{background:var(--cream)}
 .nota{font-size:.9rem;color:var(--ink-2);margin-top:1rem;border-top:1px solid var(--line);padding-top:.6rem}
 .top-link{display:inline-block;margin-top:1rem;font-size:.85rem}
 @media (max-width:900px){
@@ -75,18 +60,39 @@ table.mini th{background:var(--paper-2)}
 }
 </style>
 </head>
-<body>
-<div class="wrap">
-<header class="top">
-  <a class="brand" href="/"><span class="bulb" aria-hidden="true"></span>Mil Focos</a>
-  <nav><a href="/">Inicio</a><a href="Un_mazo_20_juegos.pdf">PDF</a></nav>
+<body id="top">
+<a class="skip" href="#contenido">Saltar al contenido</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="MIL FOCOS, inicio">
+      <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"/><path d="M10 21h4"/><path d="M12 3a6 6 0 0 0-4 10.5c.7.6 1 1.3 1 2.5h6c0-1.2.3-1.9 1-2.5A6 6 0 0 0 12 3z" fill="#F5C518"/></svg>
+      Mil Focos
+    </a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="site-nav" aria-label="Abrir menú">
+      <svg class="open" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      <svg class="close" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+    <nav class="nav" id="site-nav" aria-label="Principal">
+      <a href="/">Inicio</a>
+      <a href="/juegos/">Juegos</a>
+      <a href="/#catalogo">Catálogo</a>
+      <a href="/#como">Cómo funciona</a>
+      <a href="/#faq">Preguntas</a>
+      <a class="btn primary" href="/MIL_IDEAS_catalogo.pdf">Descargar catálogo</a>
+    </nav>
+  </div>
 </header>
+
+
+<div class="wrap" id="contenido">
 <div class="layout">
 <aside class="toc" aria-label="Índice de juegos">
-  <a class="pdf" href="Un_mazo_20_juegos.pdf">Descargar todo en PDF</a>
+  <a class="pdf" href="/MIL_IDEAS_catalogo.pdf">Descargar todo en PDF</a>
   <ul><li><a href="#01-ocho-loco"><span>01</span>Ocho Loco</a></li><li><a href="#02-mentiroso"><span>02</span>Mentiroso</a></li><li><a href="#03-palace"><span>03</span>Palace</a></li><li><a href="#04-presidente"><span>04</span>Presidente</a></li><li><a href="#05-golf"><span>05</span>Golf</a></li><li><a href="#06-cabo"><span>06</span>Cabo</a></li><li><a href="#07-manotazo-egipcio"><span>07</span>Manotazo egipcio</a></li><li><a href="#08-corazones"><span>08</span>Corazones</a></li><li><a href="#09-espadas"><span>09</span>Espadas</a></li><li><a href="#10-apuesta-exacta"><span>10</span>Apuesta exacta</a></li><li><a href="#11-euchre"><span>11</span>Euchre</a></li><li><a href="#12-durak"><span>12</span>Durak</a></li><li><a href="#13-gin-rummy"><span>13</span>Gin Rummy</a></li><li><a href="#14-casino"><span>14</span>Casino</a></li><li><a href="#15-cribbage"><span>15</span>Cribbage</a></li><li><a href="#16-regicide"><span>16</span>Regicide</a></li><li><a href="#17-trio"><span>17</span>Trio</a></li><li><a href="#18-siete-a-la-vista"><span>18</span>Siete a la vista</a></li><li><a href="#19-la-mente"><span>19</span>La Mente</a></li><li><a href="#20-texas-hold-em-con-puntos"><span>20</span>Texas Hold'em con puntos</a></li><li><a href="#bonus-solitarios"><span>+</span>Bonus: dos solitarios</a></li></ul>
 </aside>
 <main>
+  <p class="eyebrow">MIL IDEAS · reglas completas</p>
   <h1>Reglas de los veinte juegos</h1>
   <p class="sub">Convenciones: «robar» es tomar carta del mazo; «baza» es una ronda de una carta por jugador, que gana la carta más alta del palo de salida salvo triunfo. Orden de valores por defecto: A (alto) K Q J 10 … 2, salvo que la ficha diga otra cosa. Los comodines solo se usan donde se menciona.</p>
 <article class="game" id="01-ocho-loco">
@@ -693,9 +699,40 @@ table.mini th{background:var(--paper-2)}
   <a class="top-link" href="#top">Volver arriba</a>
 </main>
 </div>
-<footer>
-  <p>Reglas clásicas basadas en las descripciones de referencia habituales (Pagat.com, Bicycle Cards). Regicide se distribuye con licencia que permite jugar con un mazo estándar; sus reglas oficiales están en regicidegame.com. Trio, Flip 7 y The Mind son adaptaciones caseras, no oficiales. Si un juego te gusta, compra la caja.</p>
-</footer>
 </div>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <a class="brand" href="/" aria-label="MIL FOCOS, inicio">
+        <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"/><path d="M10 21h4"/><path d="M12 3a6 6 0 0 0-4 10.5c.7.6 1 1.3 1 2.5h6c0-1.2.3-1.9 1-2.5A6 6 0 0 0 12 3z" fill="#F5C518"/></svg>
+        Mil Focos
+      </a>
+      <p style="margin-top:.9rem">MIL FOCOS es un proyecto personal de José Cáceres, en Lima. MIL IDEAS es su primer catálogo: veinte juegos para un mazo estándar de cartas.</p>
+    </div>
+    <div>
+      <h4>Sitio</h4>
+      <ul>
+        <li><a href="/">Inicio</a></li>
+        <li><a href="/juegos/">Juegos</a></li>
+        <li><a href="/catalogo.html">Reglas en línea</a></li>
+        <li><a href="/MIL_IDEAS_catalogo.pdf">Catálogo en PDF</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contacto</h4>
+      <ul>
+        <li><a href="https://github.com/Josexato/milfocos/issues">Sugerencias y correcciones en GitHub</a></li>
+      </ul>
+    </div>
+    <div class="legal">
+      <span>© <span data-year>2026</span> MIL FOCOS. Los nombres de juegos mencionados pertenecen a sus editores; las adaptaciones son caseras y no oficiales.</span>
+      <span>Un mazo. Veinte juegos.</span>
+    </div>
+  </div>
+</footer>
+
+
+<script src="/assets/js/site.js" defer></script>
 </body>
 </html>
