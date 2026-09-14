@@ -13,6 +13,7 @@ MIL FOCOS es la marca; MIL IDEAS es el producto: **un mazo, veinte juegos**. Sit
 - `assets/js/i18n.js` — localización regional del vocabulario (ronda/baza, palo/pinta, descarte/pozo…) con selector de región en el footer. Documentado en `LOCALIZACION.md`.
 - `assets/img/` — producto (WebP con transparencia, 2 tamaños), portada del PDF, foto de mesa y `og.jpg` para Open Graph.
 - `fonts/` — Bricolage Grotesque (licencia OFL) servida localmente.
+- Analíticas: GoatCounter (`milfocos.goatcounter.com`), sin cookies. El script está al final de cada página; los clics en «Descargar catálogo», «Ver juegos» y «Lista de espera» se registran como eventos con `data-goatcounter-click`. No cuenta visitas desde `localhost`.
 - `CNAME` — dominio personalizado (no borrar). `.nojekyll`, `robots.txt`, `sitemap.xml`.
 
 ## Editar contenido
